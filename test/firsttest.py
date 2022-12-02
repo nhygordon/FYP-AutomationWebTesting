@@ -2,21 +2,32 @@
 # selenium
 
 # import webdriver
+import unittest
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
 
-try:
-# create webdriver object
-    driver = webdriver.Chrome()
-# get google.co.hk
-    driver.get("https://google.hk")
-    m = driver.find_element("xpath","/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input")
+class googlesearch(unittest.TestCase):
+    def setUp(self):
+        # create webdriver object
+        self.driver = webdriver.Chrome()
+        # get google.co.hk
+        self.driver.get("https://google.hk")
+
+    def test_google_search(self):
+        driver = self.driver
+        
+        m = driver.find_element("xpath","/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input")
 #enter search text
-    m.send_keys("Tutorialspoint")
+        m.send_keys("Tutorialspoint")
 #perform Google search with Keys.ENTER
-    m.send_keys(Keys.RETURN)
-    time.sleep(5)
-    driver.close()
-except Exception as e:
-    print('Failed to do something: ' + str(e))
+        m.send_keys(Keys.RETURN)
+        self.assertIn("Python", driver.title)
+        self.assertNotIn("No results found.", driver.page_source)
+        
+
+    def tearDown(self):
+        self.driver.quit()
+
+if __name__ == "__main__":
+    unittest.main()
