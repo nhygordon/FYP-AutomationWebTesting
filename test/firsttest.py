@@ -1,12 +1,10 @@
 # Python program to demonstrate
 # selenium
 
-# import webdriver
 import unittest
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
-
 class googlesearch(unittest.TestCase):
     def setUp(self):
         # create webdriver object
@@ -16,7 +14,6 @@ class googlesearch(unittest.TestCase):
 
     def test_google_search(self):
         driver = self.driver
-        
         m = driver.find_element("xpath","/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input")
 #enter search text
         m.send_keys("Tutorialspoint")
