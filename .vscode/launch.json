@@ -5,6 +5,7 @@
     "version": "0.2.0",
     "configurations": [
 
+
         {"name":"Python: Current File","type":"python","request":"launch","program":"${file}","console":"integratedTerminal","justMyCode":true},
 
     
@@ -15,7 +16,7 @@
             "program": "${file}",
             "console": "integratedTerminal",
             "justMyCode": true,
-            "cwd": "${workspaceFolder}/src/KFC/Test"
+            "cwd": "${workspaceFolder}/src",
         }
     ]
 }

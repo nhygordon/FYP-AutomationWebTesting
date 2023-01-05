@@ -2,13 +2,17 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-import os
+import os ,sys
+sys.path.append("./src/KFC")
 import time
 import unittest
+from pages.Pages import LoginPage,PersonalInfoPage
+
 
 # login_info
-user_pn = os.getenv('KFC_PN')
-user_pw = os.getenv('KFC_PW')
+user_phonenumber = os.getenv('KFC_PN')
+user_password = os.getenv('KFC_PW')
+print(user_password)
 
 class LogInLogOutTest(unittest.TestCase):
 
@@ -22,20 +26,33 @@ class LogInLogOutTest(unittest.TestCase):
 
     def test_loginlogout_valid(self):
         driver = self.driver
+
+        login = LoginPage(driver)
+        login.go_loginpage()
+        login.enter_PhoneNumber(user_phonenumber)
+        login.enter_Password(user_password)
+        login.click_login()
+        '''
         #main page to login page
         WebDriverWait(driver, 20).until(EC.frame_to_be_available_and_switch_to_it((By.ID,"frame1")))
         WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "div.login"))).click()
+        
         #login
-        WebDriverWait(driver, 20).until(EC.visibility_of_element_located((By.XPATH, "//*[@id='app']/div[1]/div[4]/div/div[1]/input"))).send_keys(user_pn)
-        WebDriverWait(driver, 20).until(EC.visibility_of_element_located((By.XPATH, "//*[@id='app']/div[1]/div[4]/div/div[2]/input"))).send_keys(user_pw)
+        WebDriverWait(driver, 20).until(EC.visibility_of_element_located((By.XPATH, "//*[@id='app']/div[1]/div[4]/div/div[1]/input"))).send_keys(user_phonenumber)
+        WebDriverWait(driver, 20).until(EC.visibility_of_element_located((By.XPATH, "//*[@id='app']/div[1]/div[4]/div/div[2]/input"))).send_keys(user_password)
         WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "div.loginBtn"))).click()
         time.sleep(5)
+        '''
+        logout = PersonalInfoPage(driver)
+        logout.go_personalinfopage()
+        logout.click_logout()
+        '''
         #logout
         WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "div.mine"))).click()
         WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "span.cellName"))).click()
         WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "div.btn"))).click()
         WebDriverWait(driver, 20).until(EC.visibility_of_element_located((By.XPATH, "//*[@id='app']/div[1]/div[5]/div/div[2]/span[2]"))).click()
-
+        '''
     @classmethod
     def tearDown(cls):
         cls.driver.quit()
