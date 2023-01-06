@@ -6,8 +6,7 @@ import os ,sys
 sys.path.append("./src/KFC")
 import unittest
 from pages.Pages import LoginPage , ProfilePage
-
-
+import HtmlTestRunner
 # login_info
 user_phonenumber = os.getenv('KFC_PN')
 user_password = os.getenv('KFC_PW')
@@ -58,4 +57,4 @@ class LogInLogOutTest(unittest.TestCase):
         print('Test completed')
 
 if __name__ == "__main__":
-    unittest.main()
+    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output='Reports'))
