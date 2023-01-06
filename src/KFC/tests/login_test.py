@@ -6,7 +6,7 @@ import os ,sys
 sys.path.append("./src/KFC")
 import time
 import unittest
-from pages.Pages import LoginPage,PersonalInfoPage
+from pages.Pages import LoginPage, AccountSettingPage
 
 
 # login_info
@@ -43,8 +43,8 @@ class LogInLogOutTest(unittest.TestCase):
         WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "div.loginBtn"))).click()
         time.sleep(5)
         '''
-        logout = PersonalInfoPage(driver)
-        logout.go_personalinfopage()
+        logout = AccountSettingPage(driver)
+        logout.go_profilepage()
         logout.click_logout()
         '''
         #logout

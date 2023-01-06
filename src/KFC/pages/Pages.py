@@ -20,7 +20,7 @@ class BasePage(object):
     def go_settingpage(self):
         WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "div.mine"))).click()
     
-    def go_personalinfopage(self):
+    def go_profilepage(self):
         self.go_settingpage()    
         WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "span.cellName"))).click()
 
@@ -42,7 +42,7 @@ class LoginPage(BasePage):
     def click_login(self):
         WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "div.loginBtn"))).click()
 
-class PersonalInfoPage(BasePage):
+class AccountSettingPage(BasePage):
     '''
     def __init__(self):
         self.logout_button_css_selector = "div.btn"
