@@ -4,15 +4,14 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import os ,sys
 sys.path.append("./src/KFC")
-import time
 import unittest
-from pages.Pages import LoginPage, AccountSettingPage
+from pages.Pages import LoginPage , ProfilePage
 
 
 # login_info
 user_phonenumber = os.getenv('KFC_PN')
 user_password = os.getenv('KFC_PW')
-print(user_password)
+# print(user_password)
 
 class LogInLogOutTest(unittest.TestCase):
 
@@ -43,7 +42,7 @@ class LogInLogOutTest(unittest.TestCase):
         WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "div.loginBtn"))).click()
         time.sleep(5)
         '''
-        logout = AccountSettingPage(driver)
+        logout = ProfilePage(driver)
         logout.go_profilepage()
         logout.click_logout()
         '''
