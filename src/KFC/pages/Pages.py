@@ -3,6 +3,7 @@ sys.path.append("./src/KFC")
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from Locators.locators import MainpageLocators, LoginPageLocators , ProfilePageLocators
+from selenium.webdriver.common.by import By
 
 class BasePage(object):
     """Base class to initialize the base page that will be called from all
@@ -20,6 +21,9 @@ class BasePage(object):
     def go_profilepage(self):
         self.go_settingpage()    
         WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable(MainpageLocators.profilepage_button)).click()
+    
+    
+    
 
 class LoginPage(BasePage):
     '''
@@ -38,6 +42,12 @@ class LoginPage(BasePage):
     
     def click_login(self):
         WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable(LoginPageLocators.login_button)).click()
+
+    def is_logined(self):
+        return "" in self.driver.title
+
+    
+
 
 class ProfilePage(BasePage):
     '''

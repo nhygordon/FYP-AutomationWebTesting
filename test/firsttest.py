@@ -15,11 +15,12 @@ class googlesearch(unittest.TestCase):
     def test_google_search(self):
         driver = self.driver
         m = driver.find_element("xpath","/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input")
+        print(m)
 #enter search text
         m.send_keys("Tutorialspoint")
 #perform Google search with Keys.ENTER
         m.send_keys(Keys.RETURN)
-        self.assertIn("Python", driver.title)
+        self.assertIn("Tutorialspoint", driver.title)
         self.assertNotIn("No results found.", driver.page_source)
         
 

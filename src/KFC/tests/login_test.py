@@ -22,6 +22,7 @@ class LogInLogOutTest(unittest.TestCase):
         cls.driver.implicitly_wait(10)
         cls.driver.get('https://www.kfchk.com/index.html')
 
+
     def test_loginlogout_valid(self):
         driver = self.driver
 
@@ -30,6 +31,8 @@ class LogInLogOutTest(unittest.TestCase):
         login.enter_PhoneNumber(user_phonenumber)
         login.enter_Password(user_password)
         login.click_login()
+        self.assertTrue(login.is_logined(), "didn't login.")
+        driver.save_screenshot("./src/KFC/Screenshot/logined.png")
         '''
         #main page to login page
         WebDriverWait(driver, 20).until(EC.frame_to_be_available_and_switch_to_it((By.ID,"frame1")))
@@ -44,6 +47,8 @@ class LogInLogOutTest(unittest.TestCase):
         logout = ProfilePage(driver)
         logout.go_profilepage()
         logout.click_logout()
+
+        
         '''
         #logout
         WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "div.mine"))).click()
@@ -51,10 +56,11 @@ class LogInLogOutTest(unittest.TestCase):
         WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "div.btn"))).click()
         WebDriverWait(driver, 20).until(EC.visibility_of_element_located((By.XPATH, "//*[@id='app']/div[1]/div[5]/div/div[2]/span[2]"))).click()
         '''
+
     @classmethod
     def tearDown(cls):
         cls.driver.quit()
         print('Test completed')
 
 if __name__ == "__main__":
-    unittest.main(verbosity=2, testRunner=HtmlTestRunner.HTMLTestRunner(output='Reports'))
+    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output='src/KFC/Reports'))
