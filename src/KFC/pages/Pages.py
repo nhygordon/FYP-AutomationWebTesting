@@ -3,6 +3,10 @@ import os
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+<<<<<<< Updated upstream
+=======
+from Locators.locators import MainpageLocators, LoginPageLocators , ProfilePageLocators, TakeOutPageLocators, OrderPageLocators, OrderPageLocators
+>>>>>>> Stashed changes
 
 class BasePage(object):
     """Base class to initialize the base page that will be called from all
@@ -24,6 +28,9 @@ class BasePage(object):
         self.go_settingpage()    
         WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "span.cellName"))).click()
 
+    def go_takeOutpage(self):
+        WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable(MainpageLocators.take_out_button)).click()
+    
 class LoginPage(BasePage):
     '''
     def __init__(self):
@@ -49,5 +56,22 @@ class PersonalInfoPage(BasePage):
         self.logout_confirm_xpath = "//*[@id='app']/div[1]/div[5]/div/div[2]/span[2]"
     '''
     def click_logout(self):
+<<<<<<< Updated upstream
         WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "div.btn"))).click()
         WebDriverWait(self.driver, 20).until(EC.visibility_of_element_located((By.XPATH, "//*[@id='app']/div[1]/div[5]/div/div[2]/span[2]"))).click()
+=======
+        WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable(ProfilePageLocators.logout_button)).click()
+        WebDriverWait(self.driver, 20).until(EC.visibility_of_element_located(ProfilePageLocators.logout_confirm_button)).click()
+    
+class SelectShopPage(BasePage):
+    def click_shop(self):
+        WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable(TakeOutPageLocators.selectShop_button)).click()
+        
+        
+class SelectFoodPage(BasePage): 
+    def order_original(self):
+        WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable(OrderPageLocators.à_la_carte_button)).click()
+        WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable(OrderPageLocators.AddOriginal_button)).click()
+        WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable(OrderPageLocators.chooseOriginal_button)).click()
+
+>>>>>>> Stashed changes
