@@ -3,10 +3,7 @@ import os
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-<<<<<<< Updated upstream
-=======
 from Locators.locators import MainpageLocators, LoginPageLocators , ProfilePageLocators, TakeOutPageLocators, OrderPageLocators, OrderPageLocators
->>>>>>> Stashed changes
 
 class BasePage(object):
     """Base class to initialize the base page that will be called from all
@@ -56,10 +53,6 @@ class PersonalInfoPage(BasePage):
         self.logout_confirm_xpath = "//*[@id='app']/div[1]/div[5]/div/div[2]/span[2]"
     '''
     def click_logout(self):
-<<<<<<< Updated upstream
-        WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "div.btn"))).click()
-        WebDriverWait(self.driver, 20).until(EC.visibility_of_element_located((By.XPATH, "//*[@id='app']/div[1]/div[5]/div/div[2]/span[2]"))).click()
-=======
         WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable(ProfilePageLocators.logout_button)).click()
         WebDriverWait(self.driver, 20).until(EC.visibility_of_element_located(ProfilePageLocators.logout_confirm_button)).click()
     
@@ -74,4 +67,3 @@ class SelectFoodPage(BasePage):
         WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable(OrderPageLocators.AddOriginal_button)).click()
         WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable(OrderPageLocators.chooseOriginal_button)).click()
 
->>>>>>> Stashed changes
