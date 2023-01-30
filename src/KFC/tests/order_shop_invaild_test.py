@@ -7,10 +7,6 @@ sys.path.append("./src/KFC")
 import unittest
 from pages.Pages import SelectShopPage, SelectFoodPage
 import HtmlTestRunner
-# login_info
-user_phonenumber = os.getenv('KFC_PN')
-user_password = os.getenv('KFC_PW')
-# print(user_password)
 
 class OrderTest(unittest.TestCase):
 
@@ -30,7 +26,10 @@ class OrderTest(unittest.TestCase):
         order.click_shop()
         
         select = SelectFoodPage(driver)
-        select.order_original()
+  
+        for i in range(30):
+            select.choose_original()
+            select.order_original()
 
     @classmethod
     def tearDown(cls):

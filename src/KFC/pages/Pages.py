@@ -26,6 +26,7 @@ class BasePage(object):
         WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "span.cellName"))).click()
 
     def go_takeOutpage(self):
+        WebDriverWait(self.driver, 20).until(EC.frame_to_be_available_and_switch_to_it((By.ID, self.app_frame_id)))
         WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable(MainpageLocators.take_out_button)).click()
     
 class LoginPage(BasePage):
@@ -62,8 +63,12 @@ class SelectShopPage(BasePage):
         
         
 class SelectFoodPage(BasePage): 
-    def order_original(self):
+    def choose_original(self):        
+        self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
         WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable(OrderPageLocators.à_la_carte_button)).click()
-        WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable(OrderPageLocators.AddOriginal_button)).click()
         WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable(OrderPageLocators.chooseOriginal_button)).click()
+
+    def order_original(self):
+        WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable(OrderPageLocators.addOriginal_button)).click()
+        WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable(OrderPageLocators.addToCart_button)).click()
 

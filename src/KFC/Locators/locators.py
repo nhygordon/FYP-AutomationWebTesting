@@ -21,8 +21,7 @@ class TakeOutPageLocators(MainpageLocators):
     
     
 class OrderPageLocators(MainpageLocators):    
-    à_la_carte_button = (By.XPATH,"//*[@id='secondFood_13846']/div[1]/div/div/div")
-    AddOriginal_button = (By.XPATH, "//*[@id='foodList']/div[1]/div[1]/div[1]/div/div[7]/div")
-    chooseOriginal_button = (By.XPATH, "//*[@id='app']/div[1]/div[4]/div/div[2]/div/div/div[1]/div/div/span")
-
-
+    à_la_carte_button = (By.XPATH,"//*[@id='foodList']/div[1]/div[1]/div[1]/div/div[8]/div")
+    chooseOriginal_button = (By.XPATH, "//*[@id='secondFood_13846']/div[1]/div/div/div")
+    addOriginal_button = (By.XPATH, "//*[@id='app']/div[1]/div[4]/div/div[2]/div/div/div[1]/div/div/span")
+    addToCart_button = (By.CSS_SELECTOR, "div.detailPage > div.priceBtn")
