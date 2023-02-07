@@ -1,9 +1,13 @@
 #import KFC.Locators 
 import os
+from selenium import webdriver
+
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from Locators.locators import MainpageLocators, LoginPageLocators , ProfilePageLocators, TakeOutPageLocators, OrderPageLocators, OrderPageLocators
+
+
 
 class BasePage(object):
     """Base class to initialize the base page that will be called from all
@@ -63,8 +67,7 @@ class SelectShopPage(BasePage):
         
         
 class SelectFoodPage(BasePage): 
-    def choose_original(self):        
-        self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+    def choose_original(self):
         WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable(OrderPageLocators.à_la_carte_button)).click()
         WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable(OrderPageLocators.chooseOriginal_button)).click()
 

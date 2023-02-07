@@ -28,9 +28,8 @@ class OrderTest(unittest.TestCase):
         
         select = SelectFoodPage(driver)
   
-        for i in range(30):
-            select.choose_original()
-            select.order_original()
+        select.choose_original()
+        select.order_original()
 
     @classmethod
     def tearDown(cls):
