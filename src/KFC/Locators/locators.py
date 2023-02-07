@@ -10,7 +10,7 @@ class LoginPageLocators(MainpageLocators):
     phonenumber_inputbox = (By.XPATH, "//*[@id='app']/div[1]/div[4]/div/div[1]/input")
     password_inputbox = (By.XPATH, "//*[@id='app']/div[1]/div[4]/div/div[2]/input")
     login_button = (By.CSS_SELECTOR, "div.loginBtn")
-
+    goback_button = (By.CSS_SELECTOR, "#topbar > div.leftIcon")
 
 class ProfilePageLocators(MainpageLocators):
     logout_button = (By.CSS_SELECTOR, "div.btn")

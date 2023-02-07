@@ -2,7 +2,7 @@
     "python.testing.unittestArgs": [
         "-v",
         "-s",
-        "./src/KFC/tests",
+        "./src",
         "-p",
         "*_test.py"
     ],    
