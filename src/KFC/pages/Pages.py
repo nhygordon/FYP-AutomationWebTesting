@@ -2,7 +2,7 @@ import sys
 sys.path.append("./src/KFC")
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from Locators.locators import MainpageLocators, LoginPageLocators , ProfilePageLocators
+from Locators.locators import MainpageLocators, LoginPageLocators , ProfilePageLocators, TakeOutPageLocators, OrderPageLocators
 from skimage.metrics import structural_similarity
 import imutils
 import cv2
@@ -25,6 +25,10 @@ class BasePage(object):
         self.go_settingpage()    
         WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable(MainpageLocators.profilepage_button)).click()
     
+    def go_takeoutpage(self):
+        WebDriverWait(self.driver, 20).until(EC.frame_to_be_available_and_switch_to_it(MainpageLocators.app_frame))
+        WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable(MainpageLocators.take_out_button)).click()
+
     def do_screenshot(self, file_name):
         self.driver.save_screenshot("./Screenshot/{}.png".format(file_name))
     
@@ -90,3 +94,17 @@ class ProfilePage(BasePage):
     def click_logout(self):
         WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable(ProfilePageLocators.logout_button)).click()
         WebDriverWait(self.driver, 20).until(EC.visibility_of_element_located(ProfilePageLocators.logout_confirm_button)).click()
+
+class SelectShopPage(BasePage):
+    def click_shop(self):
+        WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable(TakeOutPageLocators.selectShop_button)).click()
+        
+        
+class SelectFoodPage(BasePage): 
+    def choose_original(self):
+        WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable(OrderPageLocators.à_la_carte_button)).click()
+        WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable(OrderPageLocators.chooseOriginal_button)).click()
+
+    def order_original(self):
+        WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable(OrderPageLocators.addOriginal_button)).click()
+        WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable(OrderPageLocators.addToCart_button)).click()
