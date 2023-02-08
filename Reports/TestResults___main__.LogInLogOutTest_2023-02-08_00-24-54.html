@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unittest Results</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="text-capitalize">Unittest Results</h2>
+                <p class='attribute'><strong>Start Time: </strong>2023-02-08 00:24:54</p>
+                <p class='attribute'><strong>Duration: </strong>5.99 s</p>
+                <p class='attribute'><strong>Summary: </strong>Total: 1, Pass: 0, Error: 1</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <table class='table table-hover table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>__main__.LogInLogOutTest</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_loginlogout_valid</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>Test completed
+</p><p style="color:maroon;">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=109.0.5414.120)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x010E6643]
+	(No symbol) [0x0107BE21]
+	(No symbol) [0x00F7DA9D]
+	(No symbol) [0x00F5EF6A]
+	(No symbol) [0x00FD3AAB]
+	(No symbol) [0x00FE61B6]
+	(No symbol) [0x00FCFB76]
+	(No symbol) [0x00FA49C1]
+	(No symbol) [0x00FA5E5D]
+	GetHandleVerifier [0x0135A142+2497106]
+	GetHandleVerifier [0x013885D3+2686691]
+	GetHandleVerifier [0x0138BB9C+2700460]
+	GetHandleVerifier [0x01193B10+635936]
+	(No symbol) [0x01084A1F]
+	(No symbol) [0x0108A418]
+	(No symbol) [0x0108A505]
+	(No symbol) [0x0109508B]
+	BaseThreadInitThunk [0x76CE00F9+25]
+	RtlGetAppContainerNamedObjectPath [0x77D37BBE+286]
+	RtlGetAppContainerNamedObjectPath [0x77D37B8E+238]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "c:\Users\user\Documents\GitHub\FYP-AutomationWebTesting\src\KFC\tests\email_login_test", line 33, in test_loginlogout_valid
+    login.gotoemailpage()
+  File "C:\Users\user\Documents\GitHub\FYP-AutomationWebTesting\./src/KFC\pages\Pages.py", line 47, in gotoemailpage
+    self.go_loginpage()
+  File "C:\Users\user\Documents\GitHub\FYP-AutomationWebTesting\./src/KFC\pages\Pages.py", line 14, in go_loginpage
+    WebDriverWait(self.driver, 20).until(EC.frame_to_be_available_and_switch_to_it( MainpageLocators.app_frame))
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\selenium\webdriver\support\wait.py", line 86, in until
+    value = method(self._driver)
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\selenium\webdriver\support\expected_conditions.py", line 256, in _predicate
+    driver.switch_to.frame(driver.find_element(*locator))
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\selenium\webdriver\remote\switch_to.py", line 95, in frame
+    self._driver.execute(Command.SWITCH_TO_FRAME, {"id": frame_reference})
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 444, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\selenium\webdriver\remote\errorhandler.py", line 249, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=109.0.5414.120)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x010E6643]
+	(No symbol) [0x0107BE21]
+	(No symbol) [0x00F7DA9D]
+	(No symbol) [0x00F5EF6A]
+	(No symbol) [0x00FD3AAB]
+	(No symbol) [0x00FE61B6]
+	(No symbol) [0x00FCFB76]
+	(No symbol) [0x00FA49C1]
+	(No symbol) [0x00FA5E5D]
+	GetHandleVerifier [0x0135A142+2497106]
+	GetHandleVerifier [0x013885D3+2686691]
+	GetHandleVerifier [0x0138BB9C+2700460]
+	GetHandleVerifier [0x01193B10+635936]
+	(No symbol) [0x01084A1F]
+	(No symbol) [0x0108A418]
+	(No symbol) [0x0108A505]
+	(No symbol) [0x0109508B]
+	BaseThreadInitThunk [0x76CE00F9+25]
+	RtlGetAppContainerNamedObjectPath [0x77D37BBE+286]
+	RtlGetAppContainerNamedObjectPath [0x77D37B8E+238]
+
+</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                Total: 1, Pass: 0, Error: 1 -- Duration: 5.99 s
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('td').on('click', '.btn', function(e){
+                e.preventDefault();
+                e.stopImmediatePropagation();
+                var $this = $(this);
+                var $nextRow = $this.closest('tr').next('tr');
+                $nextRow.slideToggle("fast");
+                $this.text(function(i, text){
+                    if (text === 'View') {
+                        return 'Hide';
+                    } else {
+                        return 'View';
+                    };
+                });
+            });
+        });
+    </script>
+</body>
+</html

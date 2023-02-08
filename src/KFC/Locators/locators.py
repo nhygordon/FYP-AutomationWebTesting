@@ -15,3 +15,9 @@ class LoginPageLocators(MainpageLocators):
 class ProfilePageLocators(MainpageLocators):
     logout_button = (By.CSS_SELECTOR, "div.btn")
     logout_confirm_button = (By.XPATH, "//*[@id='app']/div[1]/div[5]/div/div[2]/span[2]")
+
+class EmailPageLocators(MainpageLocators):
+    emailpage_button = (By.XPATH,"//*[@id='app']/div[1]/div[3]/span[2]")
+    email_inputbox = (By.XPATH, "//*[@id='app']/div[1]/div[4]/div/div[1]/input")
+    emailpassword_inputbox = (By.XPATH, "//*[@id='app']/div[1]/div[4]/div/div[2]/input")
+    login_button = (By.CSS_SELECTOR, "div.loginBtn")
