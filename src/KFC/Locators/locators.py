@@ -28,3 +28,9 @@ class OrderPageLocators(MainpageLocators):
     chooseOriginal_button = (By.CSS_SELECTOR, "#secondFood_13846 > div:nth-child(2) > div > div > div")
     addOriginal_button = (By.CSS_SELECTOR, "#app > div.detailPage > div.skuBox > div > div:nth-child(3) > div > div > div:nth-child(1) > div > div > span")
     addToCart_button = (By.CSS_SELECTOR, "div.detailPage > div.priceBtn")
+
+class EmailPageLocators(MainpageLocators):
+    emailpage_button = (By.XPATH,"//*[@id='app']/div[1]/div[3]/span[2]")
+    email_inputbox = (By.XPATH, "//*[@id='app']/div[1]/div[4]/div/div[1]/input")
+    emailpassword_inputbox = (By.XPATH, "//*[@id='app']/div[1]/div[4]/div/div[2]/input")
+    login_button = (By.CSS_SELECTOR, "div.loginBtn")

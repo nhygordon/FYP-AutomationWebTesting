@@ -2,7 +2,7 @@ import sys
 sys.path.append("./src/KFC")
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from Locators.locators import MainpageLocators, LoginPageLocators , ProfilePageLocators, TakeOutPageLocators, OrderPageLocators
+from Locators.locators import MainpageLocators, LoginPageLocators , ProfilePageLocators, TakeOutPageLocators, OrderPageLocators, EmailPageLocators
 from skimage.metrics import structural_similarity
 import imutils
 import cv2
@@ -88,6 +88,23 @@ class LoginPage(BasePage):
 
     def go_back(self):
         WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable(LoginPageLocators.goback_button)).click()
+
+class EmailPage(BasePage):
+    
+
+    def gotoemailpage(self):
+        WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable(EmailPageLocators.emailpage_button)).click()
+
+    def enter_Email(self, email):
+        WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable(EmailPageLocators.email_inputbox)).clear()
+        WebDriverWait(self.driver, 20).until(EC.visibility_of_element_located(EmailPageLocators.email_inputbox)).send_keys(email)
+    
+    def enter_password(self, password):
+        WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable(EmailPageLocators.emailpassword_inputbox)).clear()
+        WebDriverWait(self.driver, 20).until(EC.visibility_of_element_located(EmailPageLocators.emailpassword_inputbox)).send_keys(password)
+
+    def click_login(self):
+        WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable(EmailPageLocators.login_button)).click()
 
 class ProfilePage(BasePage):
     
