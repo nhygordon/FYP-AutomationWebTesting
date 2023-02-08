@@ -1,37 +1,27 @@
 import unittest
-from ddt import ddt , data , unpack
+from ddt import ddt,data,unpack
+from time import sleep
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-
+  
 @ddt
-class SearchDDT(unittest.TestCase):
+class MyTesting(unittest.TestCase):
     def setUp(self):
-        # create a new Firefox session
-        self.driver = webdriver.Firefox()
-        self.driver.implicitly_wait(30)
-        self.driver.maximize_window()
-        # navigate to the application home page
-        self.driver.get("http://demo.magentocommerce.com/")
-        # specify test data using @data decorator
-    @data(("phones", 2), ("music", 5))
-    @unpack        
-    def test_search(self, search_value, expected_count):
-        # get the search textbox
-        self.search_field = self.driver.find_element(By.NAME,"q")   #find_element_by_name(“q”)
-        self.search_field.clear()
-        # enter search keyword and submit.
-        # use search_value argument to pass data
-        self.search_field.send_keys(search_value)
-        self.search_field.submit()
-        # get all the anchor elements which have
-        # product names displayed
-        # currently on result page using
-        # find_elements_by_xpath method
-        products = self.driver.find_element(By.XPATH,"//h2[@class=‘product-name’]/a")           #find_elements_by_xpath(“//h2[@class=‘product-name’]/a”)
-        # check count of products shown in results
-        self.assertEqual(expected_count, len(products))
+        self.dr = webdriver.Chrome()
+        self.dr.get('http://www.baidu.com')
+
+    @data(['python','python_百度搜索'],['java','java_百度搜索'])
+    @unpack
+    def test_baidu(self,a,b):
+        self.dr.find_element(By.ID,"kw").send_keys(a) # find_element_by_id('kw').send_keys(a)
+        self.dr.find_element(By.ID,"su").click() #find_element_by_id('su').click()
+        sleep(2)
+        c = self.dr.title
+        self.assertEqual(b,c)
+         
+ 
     def tearDown(self):
-        # close the browser window
-        self.driver.quit()
+        self.dr.close()
 if __name__ == '__main__':
     unittest.main(verbosity=2)
+
