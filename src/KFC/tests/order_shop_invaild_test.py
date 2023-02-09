@@ -39,4 +39,4 @@ class OrderTest(unittest.TestCase):
         print('Test completed')
 
 if __name__ == "__main__":
-    unittest.main(verbosity=2, testRunner=HtmlTestRunner.HTMLTestRunner(output='Reports'))
+    unittest.main(verbosity=2, testRunner=HtmlTestRunner.HTMLTestRunner(output='src/KFC/Reports'))

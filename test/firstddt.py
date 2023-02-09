@@ -3,7 +3,7 @@ from ddt import ddt,data,unpack
 from time import sleep
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-  
+import HtmlTestRunner
 @ddt
 class MyTesting(unittest.TestCase):
     def setUp(self):
@@ -23,5 +23,5 @@ class MyTesting(unittest.TestCase):
     def tearDown(self):
         self.dr.close()
 if __name__ == '__main__':
-    unittest.main(verbosity=2)
+    unittest.main(verbosity=2, testRunner=HtmlTestRunner.HTMLTestRunner(output='src/KFC/Reports'))
 
