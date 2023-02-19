@@ -5,11 +5,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-<<<<<<< Updated upstream
-from Locators.locators import MainpageLocators, LoginPageLocators , ProfilePageLocators, TakeOutPageLocators, OrderPageLocators, OrderPageLocators
-
-=======
-from Locators.locators import MainpageLocators, Mainpage2Locators, LoginPageLocators , ProfilePageLocators, TakeOutPageLocators, OrderPageLocators, EmailPageLocators
+from Locators.locators import MainpageLocators, Mainpage2Locators , ProfilePageLocators, TakeOutPageLocators, OrderPageLocators
 from skimage.metrics import structural_similarity
 import imutils
 import cv2
@@ -17,7 +13,6 @@ from PIL import Image
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
->>>>>>> Stashed changes
 
 
 class BasePage(object):

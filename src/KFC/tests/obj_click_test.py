@@ -21,7 +21,7 @@ class OrderTest(unittest.TestCase):
         cls.driver.implicitly_wait(10)
         cls.driver.get('https://www.kfchk.com/index.html')
 
-    def test_order_valid(self):
+    def test_obj_click(self):
         driver = self.driver
 
         click = BasePage2(driver)

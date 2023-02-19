@@ -5,14 +5,11 @@ class MainpageLocators(object):
     settingpage_button = (By.CSS_SELECTOR, "div.mine")
     profilepage_button = (By.CSS_SELECTOR, "span.cellName")
     take_out_button = (By.CSS_SELECTOR, "#main > div.bodyInfo > div.order > div:nth-child(2) > img")
-<<<<<<< Updated upstream
-    
-=======
 
 class Mainpage2Locators(MainpageLocators):
     close_button = (By.XPATH, "//*[@id='delivery-modal']/div/div/div[1]/button/img")
-
->>>>>>> Stashed changes
+    body = (By.CSS_SELECTOR, "body")
+    
 class LoginPageLocators(MainpageLocators):
     phonenumber_inputbox = (By.XPATH, "//*[@id='app']/div[1]/div[4]/div/div[1]/input")
     password_inputbox = (By.XPATH, "//*[@id='app']/div[1]/div[4]/div/div[2]/input")

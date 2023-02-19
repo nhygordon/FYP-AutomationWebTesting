@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unittest Results</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="text-capitalize">Unittest Results</h2>
+                <p class='attribute'><strong>Start Time: </strong>2023-02-19 22:17:29</p>
+                <p class='attribute'><strong>Duration: </strong>14.04 s</p>
+                <p class='attribute'><strong>Summary: </strong>Total: 1, Pass: 0, Error: 1</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <table class='table table-hover table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>__main__.OrderTest</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_order_invalid</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">StaleElementReferenceException: Message: stale element reference: element is not attached to the page document
+  (Session info: chrome=110.0.5481.100)
+Stacktrace:
+0   chromedriver                        0x0000000104cc8138 chromedriver + 4923704
+1   chromedriver                        0x0000000104c409d3 chromedriver + 4368851
+2   chromedriver                        0x0000000104889787 chromedriver + 472967
+3   chromedriver                        0x000000010488d8b4 chromedriver + 489652
+4   chromedriver                        0x000000010488d496 chromedriver + 488598
+5   chromedriver                        0x000000010488e51e chromedriver + 492830
+6   chromedriver                        0x00000001049128af chromedriver + 1034415
+7   chromedriver                        0x00000001048f6fb2 chromedriver + 921522
+8   chromedriver                        0x0000000104911c0f chromedriver + 1031183
+9   chromedriver                        0x00000001048f6d23 chromedriver + 920867
+10  chromedriver                        0x00000001048bda4b chromedriver + 686667
+11  chromedriver                        0x00000001048bf044 chromedriver + 692292
+12  chromedriver                        0x0000000104c938fe chromedriver + 4708606
+13  chromedriver                        0x0000000104c98e22 chromedriver + 4730402
+14  chromedriver                        0x0000000104ca16bf chromedriver + 4765375
+15  chromedriver                        0x0000000104c99e80 chromedriver + 4734592
+16  chromedriver                        0x0000000104c6a975 chromedriver + 4540789
+17  chromedriver                        0x0000000104cbbe78 chromedriver + 4873848
+18  chromedriver                        0x0000000104cbbff5 chromedriver + 4874229
+19  chromedriver                        0x0000000104cd06de chromedriver + 4957918
+20  libsystem_pthread.dylib             0x00007ff81614d259 _pthread_start + 125
+21  libsystem_pthread.dylib             0x00007ff816148c7b thread_start + 15
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "/Users/fl/Documents/GitHub/FYP-AutomationWebTesting/src/KFC/tests/order_shop_invaild_test.py", line 26, in test_order_invalid
+    order.go_takeOutpage()
+  File "/Users/fl/Documents/GitHub/FYP-AutomationWebTesting/./src/KFC/pages/Pages.py", line 40, in go_takeOutpage
+    WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable(MainpageLocators.take_out_button)).click()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/selenium/webdriver/support/wait.py", line 86, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/selenium/webdriver/support/expected_conditions.py", line 313, in _predicate
+    target = visibility_of(target)(driver)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/selenium/webdriver/support/expected_conditions.py", line 141, in _predicate
+    return _element_if_visible(element)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/selenium/webdriver/support/expected_conditions.py", line 147, in _element_if_visible
+    return element if element.is_displayed() == visibility else False
+                      ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/selenium/webdriver/remote/webelement.py", line 264, in is_displayed
+    return self.parent.execute_script("return (%s).apply(null, arguments);" % isDisplayed_js, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 506, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 444, in execute
+    self.error_handler.check_response(response)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py", line 249, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: element is not attached to the page document
+  (Session info: chrome=110.0.5481.100)
+Stacktrace:
+0   chromedriver                        0x0000000104cc8138 chromedriver + 4923704
+1   chromedriver                        0x0000000104c409d3 chromedriver + 4368851
+2   chromedriver                        0x0000000104889787 chromedriver + 472967
+3   chromedriver                        0x000000010488d8b4 chromedriver + 489652
+4   chromedriver                        0x000000010488d496 chromedriver + 488598
+5   chromedriver                        0x000000010488e51e chromedriver + 492830
+6   chromedriver                        0x00000001049128af chromedriver + 1034415
+7   chromedriver                        0x00000001048f6fb2 chromedriver + 921522
+8   chromedriver                        0x0000000104911c0f chromedriver + 1031183
+9   chromedriver                        0x00000001048f6d23 chromedriver + 920867
+10  chromedriver                        0x00000001048bda4b chromedriver + 686667
+11  chromedriver                        0x00000001048bf044 chromedriver + 692292
+12  chromedriver                        0x0000000104c938fe chromedriver + 4708606
+13  chromedriver                        0x0000000104c98e22 chromedriver + 4730402
+14  chromedriver                        0x0000000104ca16bf chromedriver + 4765375
+15  chromedriver                        0x0000000104c99e80 chromedriver + 4734592
+16  chromedriver                        0x0000000104c6a975 chromedriver + 4540789
+17  chromedriver                        0x0000000104cbbe78 chromedriver + 4873848
+18  chromedriver                        0x0000000104cbbff5 chromedriver + 4874229
+19  chromedriver                        0x0000000104cd06de chromedriver + 4957918
+20  libsystem_pthread.dylib             0x00007ff81614d259 _pthread_start + 125
+21  libsystem_pthread.dylib             0x00007ff816148c7b thread_start + 15
+
+</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                Total: 1, Pass: 0, Error: 1 -- Duration: 14.04 s
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('td').on('click', '.btn', function(e){
+                e.preventDefault();
+                e.stopImmediatePropagation();
+                var $this = $(this);
+                var $nextRow = $this.closest('tr').next('tr');
+                $nextRow.slideToggle("fast");
+                $this.text(function(i, text){
+                    if (text === 'View') {
+                        return 'Hide';
+                    } else {
+                        return 'View';
+                    };
+                });
+            });
+        });
+    </script>
+</body>
+</html

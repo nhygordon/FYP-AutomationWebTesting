@@ -1,6 +1,5 @@
 from distutils.log import error
 from selenium import webdriver
-from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import os ,sys
@@ -19,18 +18,19 @@ class OrderTest(unittest.TestCase):
         cls.driver.implicitly_wait(10)
         cls.driver.get('https://www.kfchk.com/index.html')
 
-    def order_shop_invaild_test(self):
-        with self.assertRaises(Exception):
-            driver = self.driver
-            order = SelectShopPage(driver)
-            order.go_takeOutpage()
-            order.click_shop()
-            
-            select = SelectFoodPage(driver)
+    def test_order_invalid(self):
+        # with self.assertRaises(Exception):
+        driver = self.driver
+        
+        order = SelectShopPage(driver)
+        order.go_takeOutpage()
+        order.click_shop()
     
-            for i in range(30):
-                select.choose_original()
-                select.order_original()
+        select = SelectFoodPage(driver)
+
+        for i in range(30):
+            select.choose_original()
+            select.order_original()
 
         
     @classmethod
