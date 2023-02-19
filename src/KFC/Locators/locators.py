@@ -5,7 +5,14 @@ class MainpageLocators(object):
     settingpage_button = (By.CSS_SELECTOR, "div.mine")
     profilepage_button = (By.CSS_SELECTOR, "span.cellName")
     take_out_button = (By.CSS_SELECTOR, "#main > div.bodyInfo > div.order > div:nth-child(2) > img")
+<<<<<<< Updated upstream
     
+=======
+
+class Mainpage2Locators(MainpageLocators):
+    close_button = (By.XPATH, "//*[@id='delivery-modal']/div/div/div[1]/button/img")
+
+>>>>>>> Stashed changes
 class LoginPageLocators(MainpageLocators):
     phonenumber_inputbox = (By.XPATH, "//*[@id='app']/div[1]/div[4]/div/div[1]/input")
     password_inputbox = (By.XPATH, "//*[@id='app']/div[1]/div[4]/div/div[2]/input")
@@ -22,8 +29,6 @@ class TakeOutPageLocators(MainpageLocators):
     
 class OrderPageLocators(MainpageLocators):    
     à_la_carte_button = (By.XPATH,"//*[@id='foodList']/div[1]/div[1]/div[1]/div/div[6]/div")
-
-    # à_la_carte_button = (By.CSS_SELECTOR,"#foodList > div.foodList.box > div.category.active > div.category-inner.active > div > div:nth-child(6) > div")
     chooseOriginal_button = (By.CSS_SELECTOR, "#secondFood_13846 > div:nth-child(2) > div > div > div")
     addOriginal_button = (By.CSS_SELECTOR, "#app > div.detailPage > div.skuBox > div > div:nth-child(3) > div > div > div:nth-child(1) > div > div > span")
     addToCart_button = (By.CSS_SELECTOR, "div.detailPage > div.priceBtn")
