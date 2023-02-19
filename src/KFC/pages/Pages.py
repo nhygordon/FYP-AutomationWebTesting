@@ -1,18 +1,21 @@
-import sys
+import sys , os
 sys.path.append("./src/KFC")
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.by import By
 from Locators.locators import MainpageLocators, LoginPageLocators , ProfilePageLocators, TakeOutPageLocators, OrderPageLocators, EmailPageLocators
 from skimage.metrics import structural_similarity
 import imutils
 import cv2
 from PIL import Image
+import time
 
 class BasePage(object):
     """Base class to initialize the base page that will be called from all
     pages"""
     def __init__(self, driver):
         self.driver = driver
+        
     
     def go_loginpage(self):
         WebDriverWait(self.driver, 20).until(EC.frame_to_be_available_and_switch_to_it( MainpageLocators.app_frame))
@@ -21,12 +24,11 @@ class BasePage(object):
     def go_settingpage(self):
         WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable(MainpageLocators.settingpage_button)).click()
     
-    def go_profilepage(self):
-        self.go_settingpage()    
+    def go_profilepage(self):   
         WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable(MainpageLocators.profilepage_button)).click()
     
     def go_takeoutpage(self):
-        WebDriverWait(self.driver, 20).until(EC.frame_to_be_available_and_switch_to_it(MainpageLocators.app_frame))
+        WebDriverWait(self.driver, 20).until(EC.frame_to_be_available_and_switch_to_it( MainpageLocators.app_frame))
         WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable(MainpageLocators.take_out_button)).click()
 
     def do_screenshot(self, file_name):
@@ -71,12 +73,15 @@ class BasePage(object):
     
 
 class LoginPage(BasePage):
+    user_phonenumber = os.getenv('KFC_PN')
+    user_password = os.getenv('KFC_PW')
+    print(user_password)
 
-    def enter_PhoneNumber(self, phonenumber):
+    def enter_PhoneNumber(self, phonenumber = user_phonenumber):
         WebDriverWait(self.driver, 20).until(EC.visibility_of_element_located(LoginPageLocators.phonenumber_inputbox)).clear()
         WebDriverWait(self.driver, 20).until(EC.visibility_of_element_located(LoginPageLocators.phonenumber_inputbox)).send_keys(phonenumber)
 
-    def enter_Password(self, password):
+    def enter_Password(self, password = user_password):
         WebDriverWait(self.driver, 20).until(EC.visibility_of_element_located(LoginPageLocators.password_inputbox)).clear()
         WebDriverWait(self.driver, 20).until(EC.visibility_of_element_located(LoginPageLocators.password_inputbox)).send_keys(password)
     
@@ -106,11 +111,38 @@ class EmailPage(BasePage):
     def click_login(self):
         WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable(EmailPageLocators.login_button)).click()
 
-class ProfilePage(BasePage):
+class ProfilePage(LoginPage):
+
+    def modify_username(self, username):
+        WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable(ProfilePageLocators.username_button)).click()
+        WebDriverWait(self.driver, 20).until(EC.visibility_of_element_located(ProfilePageLocators.username_editbox)).send_keys(username)
+        time.sleep(2)
+        WebDriverWait(self.driver, 20).until(EC.visibility_of_element_located(ProfilePageLocators.username_edit_confirm_button)).click()
+    
+    def modify_gender(self, gender):
+        WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable(ProfilePageLocators.gender_edit_button)).click()
+        time.sleep(1)
+        if gender == 'M':
+            WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable(ProfilePageLocators.gender_M_button)).click()
+        elif gender == 'F':
+            WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable(ProfilePageLocators.gender_F_button)).click()
+        elif gender == 'ND':
+            WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable(ProfilePageLocators.gender_ND_button)).click()
+        else :
+            print('please retry with M/F/ND')
+        #WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable(ProfilePageLocators.gender_edit_confirm_button)).click()
+
+    def get_currnet_gender(self):
+        current_gender = WebDriverWait(self.driver, 20).until(EC.visibility_of_element_located(ProfilePageLocators.gender_current_text)).text
+        print(current_gender)
+        return current_gender
     
     def click_logout(self):
         WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable(ProfilePageLocators.logout_button)).click()
         WebDriverWait(self.driver, 20).until(EC.visibility_of_element_located(ProfilePageLocators.logout_confirm_button)).click()
+    
+    def left(self):
+        WebDriverWait(self.driver, 20).until(EC.visibility_of_element_located(ProfilePageLocators.left_button)).click()
 
 class SelectShopPage(BasePage):
     def click_shop(self):

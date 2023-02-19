@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unittest Results</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="text-capitalize">Unittest Results</h2>
+                <p class='attribute'><strong>Start Time: </strong>2023-02-17 13:00:10</p>
+                <p class='attribute'><strong>Duration: </strong>81.51 s</p>
+                <p class='attribute'><strong>Summary: </strong>Total: 2, Pass: 1, Error: 1</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <table class='table table-hover table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>__main__.LoginPageTest</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_loginlogout_phonenumber</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>Test completed
+</p><p style="color:maroon;">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=109.0.5414.122)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x00EA6643]
+	(No symbol) [0x00E3BE21]
+	(No symbol) [0x00D3DA9D]
+	(No symbol) [0x00D1EF6A]
+	(No symbol) [0x00D93AAB]
+	(No symbol) [0x00DA61B6]
+	(No symbol) [0x00D8FB76]
+	(No symbol) [0x00D649C1]
+	(No symbol) [0x00D65E5D]
+	GetHandleVerifier [0x0111A142+2497106]
+	GetHandleVerifier [0x011485D3+2686691]
+	GetHandleVerifier [0x0114BB9C+2700460]
+	GetHandleVerifier [0x00F53B10+635936]
+	(No symbol) [0x00E44A1F]
+	(No symbol) [0x00E4A418]
+	(No symbol) [0x00E4A505]
+	(No symbol) [0x00E5508B]
+	BaseThreadInitThunk [0x75BD00F9+25]
+	RtlGetAppContainerNamedObjectPath [0x77217BBE+286]
+	RtlGetAppContainerNamedObjectPath [0x77217B8E+238]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "e:\hkmu-Project2022\FYP-AutomationWebTesting\src\KFC\tests\loginpage\loginpage_test.py", line 33, in test_loginlogout_phonenumber
+    login.click_login()
+  File "./src/KFC\pages\Pages.py", line 89, in click_login
+    WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable(LoginPageLocators.login_button)).click()
+  File "E:\hkmu-Project2022\FYP-AutomationWebTesting\automation-web-selenium\lib\site-packages\selenium\webdriver\support\wait.py", line 86, in until
+    value = method(self._driver)
+  File "E:\hkmu-Project2022\FYP-AutomationWebTesting\automation-web-selenium\lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 312, in _predicate
+    target = driver.find_element(*target)  # grab element at locator
+  File "E:\hkmu-Project2022\FYP-AutomationWebTesting\automation-web-selenium\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 861, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+  File "E:\hkmu-Project2022\FYP-AutomationWebTesting\automation-web-selenium\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 444, in execute
+    self.error_handler.check_response(response)
+  File "E:\hkmu-Project2022\FYP-AutomationWebTesting\automation-web-selenium\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 249, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=109.0.5414.122)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x00EA6643]
+	(No symbol) [0x00E3BE21]
+	(No symbol) [0x00D3DA9D]
+	(No symbol) [0x00D1EF6A]
+	(No symbol) [0x00D93AAB]
+	(No symbol) [0x00DA61B6]
+	(No symbol) [0x00D8FB76]
+	(No symbol) [0x00D649C1]
+	(No symbol) [0x00D65E5D]
+	GetHandleVerifier [0x0111A142+2497106]
+	GetHandleVerifier [0x011485D3+2686691]
+	GetHandleVerifier [0x0114BB9C+2700460]
+	GetHandleVerifier [0x00F53B10+635936]
+	(No symbol) [0x00E44A1F]
+	(No symbol) [0x00E4A418]
+	(No symbol) [0x00E4A505]
+	(No symbol) [0x00E5508B]
+	BaseThreadInitThunk [0x75BD00F9+25]
+	RtlGetAppContainerNamedObjectPath [0x77217BBE+286]
+	RtlGetAppContainerNamedObjectPath [0x77217B8E+238]
+
+</p>
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_loginpage_ui</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>SSIM: 0.9981297768426302
+None
+Test completed
+</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                Total: 2, Pass: 1, Error: 1 -- Duration: 81.51 s
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('td').on('click', '.btn', function(e){
+                e.preventDefault();
+                e.stopImmediatePropagation();
+                var $this = $(this);
+                var $nextRow = $this.closest('tr').next('tr');
+                $nextRow.slideToggle("fast");
+                $this.text(function(i, text){
+                    if (text === 'View') {
+                        return 'Hide';
+                    } else {
+                        return 'View';
+                    };
+                });
+            });
+        });
+    </script>
+</body>
+</html
