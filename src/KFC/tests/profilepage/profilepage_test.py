@@ -2,7 +2,7 @@ from selenium import webdriver
 import os ,sys
 sys.path.append("./src/KFC")
 import unittest
-from pages.Pages import ProfilePage
+from Pages.pages import ProfilePage
 import HtmlTestRunner
 
 class ProfilePageTest(unittest.TestCase):

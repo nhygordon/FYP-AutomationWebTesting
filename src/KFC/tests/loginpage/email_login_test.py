@@ -6,7 +6,7 @@ import os ,sys
 sys.path.append("./src/KFC")
 import time
 import unittest
-from pages.Pages import ProfilePage,EmailPage
+from Pages.pages import ProfilePage,EmailPage
 import HtmlTestRunner
 
 

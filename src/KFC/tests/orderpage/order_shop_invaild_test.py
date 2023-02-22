@@ -6,7 +6,7 @@ from selenium.webdriver.support import expected_conditions as EC
 import os ,sys
 sys.path.append("./src/KFC")
 import unittest
-from pages.Pages import SelectShopPage, SelectFoodPage
+from Pages.pages import SelectShopPage, SelectFoodPage
 import HtmlTestRunner
 
 class OrderTest(unittest.TestCase):

@@ -2,7 +2,7 @@ from selenium import webdriver
 import time ,sys
 sys.path.append("./src/KFC")
 import unittest
-from pages.Pages import LoginPage , ProfilePage
+from Pages.pages import LoginPage , ProfilePage
 import HtmlTestRunner
 
 
@@ -32,7 +32,7 @@ class LoginPageTest(unittest.TestCase):
         login.click_login()
 
         #driver.implicitly_wait(2)
-        time.sleep(2)
+        #time.sleep(2)
         driver.save_screenshot("loginpage_production")
         self.assertTrue(login.is_logined(), "didn't login.")
         
