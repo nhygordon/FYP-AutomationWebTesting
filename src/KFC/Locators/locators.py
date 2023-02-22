@@ -6,7 +6,9 @@ class MainpageLocators(object):
     profilepage_button = (By.CSS_SELECTOR, "#app > div.mine > div.cellList > div.cellBox.active > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > img")
     take_out_button = (By.CSS_SELECTOR, "#main > div.bodyInfo > div.order > div:nth-child(2) > img")
     
-
+class Mainpage2Locators(MainpageLocators):
+    close_button = (By.XPATH, "//*[@id='delivery-modal']/div/div/div[1]/button/img")
+    body = (By.CSS_SELECTOR, "body")
 
 class LoginPageLocators(MainpageLocators):
     phonenumber_inputbox = (By.XPATH, "//*[@id='app']/div[1]/div[4]/div/div[1]/input")

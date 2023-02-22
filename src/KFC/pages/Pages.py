@@ -3,7 +3,8 @@ sys.path.append("./src/KFC")
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
-from Locators.locators import MainpageLocators, LoginPageLocators , ProfilePageLocators, TakeOutPageLocators, OrderPageLocators, EmailPageLocators
+from selenium.webdriver.common.action_chains import ActionChains
+from Locators.locators import MainpageLocators,Mainpage2Locators, LoginPageLocators , ProfilePageLocators, TakeOutPageLocators, OrderPageLocators, EmailPageLocators
 from skimage.metrics import structural_similarity
 import imutils
 import cv2
@@ -68,7 +69,22 @@ class BasePage(object):
         cv2.imwrite("./src/KFC/Reports/screenshot_result/{}.png".format(image_production),imageB)
         # cv2.imshow("Diff", diff)
         cv2.waitKey(0)
+
+    def scroll_to_buttom(self):
+        WebDriverWait(self.driver, 20).until(EC.visibility_of_element_located(Mainpage2Locators.body))
+        self.driver.execute_script("window.scrollTo(0,document.body.scrollHeight)")
     
+class BasePage2(BasePage):
+    def close_frame(self):
+        WebDriverWait(self.driver, 20).until(EC.frame_to_be_available_and_switch_to_it(MainpageLocators.app_frame))
+        WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable(Mainpage2Locators.close_button)).click()
+
+    def click_test(self):
+        element = self.driver.find_element(By.CSS_SELECTOR, "body > div.page-area > div.cookie-area.py-5.position-fixed.start-0.bottom-0.w-100 > div > div > div > div")
+        loc = element.location
+        X, Y = loc.get('x') + 1, loc.get('y')
+        action = ActionChains(self.driver)
+        action.move_by_offset(X,Y)
     
     
 
