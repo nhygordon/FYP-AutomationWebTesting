@@ -1,4 +1,3 @@
-from distutils.log import error
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -6,7 +5,7 @@ from selenium.webdriver.support import expected_conditions as EC
 import os ,sys
 sys.path.append("./src/KFC")
 import unittest
-from Pages.pages import SelectShopPage, SelectFoodPage
+from pages.Pages import SelectShopPage, SelectFoodPage
 import HtmlTestRunner
 
 class OrderTest(unittest.TestCase):
@@ -19,9 +18,10 @@ class OrderTest(unittest.TestCase):
         cls.driver.implicitly_wait(10)
         cls.driver.get('https://www.kfchk.com/index.html')
 
-    def order_shop_invaild_test(self):
-        with self.assertRaises(Exception):
+    def test_order_shop_invaild(self):
+        with self.assertRaises(Exception): #temp only
             driver = self.driver
+            
             order = SelectShopPage(driver)
             order.go_takeoutpage()
             order.click_shop()

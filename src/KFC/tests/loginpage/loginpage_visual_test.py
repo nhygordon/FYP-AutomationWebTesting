@@ -2,7 +2,7 @@ from selenium import webdriver
 import os ,sys
 sys.path.append("./src/KFC")
 import unittest
-from Pages.pages import LoginPage 
+from pages.Pages import LoginPage 
 import HtmlTestRunner
 # login_info
 user_phonenumber = os.getenv('KFC_PN')

@@ -4,7 +4,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
-from Locators.locators import MainpageLocators,Mainpage2Locators, LoginPageLocators , ProfilePageLocators, TakeOutPageLocators, OrderPageLocators, EmailPageLocators
+from Locators.locators import MainpageLocators, Mainpage2Locators, LoginPageLocators , ProfilePageLocators, TakeOutPageLocators, OrderPageLocators, EmailPageLocators
 from skimage.metrics import structural_similarity
 import imutils
 import cv2
@@ -76,18 +76,27 @@ class BasePage(object):
     
 class BasePage2(BasePage):
     def close_frame(self):
-        WebDriverWait(self.driver, 20).until(EC.frame_to_be_available_and_switch_to_it(MainpageLocators.app_frame))
         WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable(Mainpage2Locators.close_button)).click()
 
-    def click_test(self):
-        element = self.driver.find_element(By.CSS_SELECTOR, "body > div.page-area > div.cookie-area.py-5.position-fixed.start-0.bottom-0.w-100 > div > div > div > div")
-        loc = element.location
-        X, Y = loc.get('x') + 1, loc.get('y')
-        action = ActionChains(self.driver)
-        action.move_by_offset(X,Y)
+    # def click_test(self):
+    #     element = self.driver.find_element(By.CSS_SELECTOR, "body > div.page-area > div.cookie-area.py-5.position-fixed.start-0.bottom-0.w-100 > div > div > div > div")
+    #     loc = element.location
+    #     X, Y = loc.get('x'), loc.get('y')
+    #     action = ActionChains(self.driver)
+    #     action.move_by_offset(X,Y)
     
-    
+    def coverage(self):
+        obj1_location = (self.driver.find_element(By.CSS_SELECTOR,"body > div.page-area > div.cookie-area.py-5.position-fixed.start-0.bottom-0.w-100")).location
+        obj1_size = (self.driver.find_element(By.CSS_SELECTOR,"body > div.page-area > div.cookie-area.py-5.position-fixed.start-0.bottom-0.w-100")).size
+        w, h = obj1_size['width'], obj1_size['height']
+        
+        obj2_location = (self.driver.find_element(By.CSS_SELECTOR,"body > div.page-area > div.footer-area.py-3 > div > div > div.col-sm-8 > div > a:nth-child(3)")).location        
+        
+        Overlap_area = ((obj2_location["y"] + h) - obj1_location["y"]) * w
+        percentage = Overlap_area/ (w * h) * 100
 
+        return percentage
+    
 class LoginPage(BasePage):
     user_phonenumber = os.getenv('KFC_PN')
     user_password = os.getenv('KFC_PW')

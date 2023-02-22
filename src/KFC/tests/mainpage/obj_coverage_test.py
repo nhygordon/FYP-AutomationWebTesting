@@ -1,4 +1,5 @@
 from distutils.log import error
+import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -6,7 +7,7 @@ from selenium.webdriver.support import expected_conditions as EC
 import os ,sys
 sys.path.append("./src/KFC")
 import unittest
-from pages.Pages import SelectShopPage, SelectFoodPage
+from pages.Pages import BasePage2
 import HtmlTestRunner
 
 class OrderTest(unittest.TestCase):
@@ -19,22 +20,23 @@ class OrderTest(unittest.TestCase):
         cls.driver.implicitly_wait(10)
         cls.driver.get('https://www.kfchk.com/index.html')
 
-    def test_order_valid(self):
+    def test_obj_coverage(self):
         driver = self.driver
 
-        order = SelectShopPage(driver)
-        order.go_takeoutpage()
-        order.click_shop()
+        cal = BasePage2(driver)
+        cal.close_frame()
+        cal.scroll_to_buttom()
+        time.sleep(1)
+        cal.coverage()
+
+        if (cal.coverage()>60):
+            raise ValueError #temp only
         
-        select = SelectFoodPage(driver)
-  
-        select.choose_original()
-        select.order_original()
 
     @classmethod
     def tearDown(cls):
         cls.driver.quit()
-        
+
         print('Test completed')
 
 if __name__ == "__main__":
