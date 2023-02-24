@@ -23,7 +23,6 @@ class LoginPageTest(unittest.TestCase):
 
         login = LoginPage(driver)
         driver.implicitly_wait(1)
-        #time.sleep(1)
         login.do_screenshot("loginpage_staging")
         login.go_loginpage()
         
