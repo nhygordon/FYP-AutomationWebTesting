@@ -21,8 +21,8 @@ class LoginPageTest(unittest.TestCase):
     def test_loginlogout(self,username='Admin',password='admin123'):
         driver = self.driver
         login = LoginPage(driver)
-        login.enter_username()
-        login.enter_Password()
+        login.enter_username(username)
+        login.enter_Password(password)
         login.click_login()
    
 

@@ -3,7 +3,7 @@ sys.path.append("./src/OrangeHRM")
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
-from Locators.locators import LoginPageLocators
+from Locators.locators import LoginPageLocators, MainpageLocators
 from skimage.metrics import structural_similarity
 import imutils
 import cv2
@@ -21,13 +21,13 @@ class BasePage(object):
     
     def get_visual_compare_result(self,filename):
         #read the image, creating an object
-        im = Image.open(r"./src/KFC/Reports/images/{}.png".format(filename))
+        im = Image.open(r"./src/OrangeHRM/Reports/images/{}.png".format(filename))
         #show picture
         print(im.show())
     
     def do_visual_compare(self,image_staging,image_production):
-        imageA = cv2.imread("./src/KFC/Screenshot/{}.png".format(image_staging))
-        imageB = cv2.imread("./src/KFC/Screenshot/{}.png".format(image_production))
+        imageA = cv2.imread("./src/OrangeHRM/Screenshot/{}.png".format(image_staging))
+        imageB = cv2.imread("./src/OrangeHRM/Screenshot/{}.png".format(image_production))
         
         # convert the images to grayscale
         grayA = cv2.cvtColor(imageA, cv2.COLOR_BGR2GRAY)
@@ -72,3 +72,11 @@ class LoginPage(BasePage):
 
     def go_back(self):
         WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable(LoginPageLocators.goback_button)).click()
+
+class Contents(BasePage):
+    
+    def go_dashboard(self):
+        WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable(MainpageLocators.dashboard_button)).click()
+
+class Dashboard():
+    pass

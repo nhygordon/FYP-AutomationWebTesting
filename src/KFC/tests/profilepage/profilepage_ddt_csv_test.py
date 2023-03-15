@@ -2,7 +2,7 @@ from selenium import webdriver
 import os ,sys
 sys.path.append("./src/KFC")
 import unittest
-from Pages.pages import ProfilePage
+from pages.Pages import ProfilePage
 import HtmlTestRunner
 from ddt import ddt,data,unpack
 import time

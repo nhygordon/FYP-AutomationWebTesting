@@ -37,7 +37,7 @@ class BasePage(object):
     
     def get_visual_compare_result(self,filename):
         #read the image, creating an object
-        im = Image.open(r"./src/KFC/Reports/images/{}.png".format(filename))
+        im = Image.open(r"./src/KFC/Reports/Screenshot/{}.png".format(filename))
         #show picture
         print(im.show())
     
