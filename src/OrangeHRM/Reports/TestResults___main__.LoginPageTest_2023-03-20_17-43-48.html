@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unittest Results</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="text-capitalize">Unittest Results</h2>
+                <p class='attribute'><strong>Start Time: </strong>2023-03-20 17:43:48</p>
+                <p class='attribute'><strong>Duration: </strong>19.37 s</p>
+                <p class='attribute'><strong>Summary: </strong>Total: 1, Pass: 0, Error: 1</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <table class='table table-hover table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>__main__.LoginPageTest</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_loginlogout</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>Test completed
+</p><p style="color:maroon;">WebDriverException: Message: disconnected: unable to send message to renderer
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.65)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x00C7DCE3]
+	(No symbol) [0x00C139D1]
+	(No symbol) [0x00B24DA8]
+	(No symbol) [0x00B16DF0]
+	(No symbol) [0x00B1747A]
+	(No symbol) [0x00B2C6A4]
+	(No symbol) [0x00B271C0]
+	(No symbol) [0x00B26D01]
+	(No symbol) [0x00B2756C]
+	(No symbol) [0x00B27850]
+	(No symbol) [0x00B4FDF8]
+	(No symbol) [0x00B503AB]
+	(No symbol) [0x00B7EE62]
+	(No symbol) [0x00B6AF14]
+	(No symbol) [0x00B7D57C]
+	(No symbol) [0x00B6ACC6]
+	(No symbol) [0x00B46F68]
+	(No symbol) [0x00B480CD]
+	GetHandleVerifier [0x00EF3832+2506274]
+	GetHandleVerifier [0x00F29794+2727300]
+	GetHandleVerifier [0x00F2E36C+2746716]
+	GetHandleVerifier [0x00D26690+617600]
+	(No symbol) [0x00C1C712]
+	(No symbol) [0x00C21FF8]
+	(No symbol) [0x00C220DB]
+	(No symbol) [0x00C2C63B]
+	BaseThreadInitThunk [0x76237D69+25]
+	RtlInitializeExceptionChain [0x771BB74B+107]
+	RtlClearBits [0x771BB6CF+191]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "e:\hkmu-Project2022\FYP-AutomationWebTesting\src\OrangeHRM\tests\loginpage_test.py", line 24, in test_loginlogout
+    login.enter_username(username)
+  File "./src/OrangeHRM\Pages\pages.py", line 60, in enter_username
+    WebDriverWait(self.driver, 20).until(EC.visibility_of_element_located(LoginPageLocators.user_inputbox)).clear()
+  File "E:\hkmu-Project2022\FYP-AutomationWebTesting\automation-web-selenium\lib\site-packages\selenium\webdriver\support\wait.py", line 86, in until
+    value = method(self._driver)
+  File "E:\hkmu-Project2022\FYP-AutomationWebTesting\automation-web-selenium\lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 125, in _predicate
+    return _element_if_visible(driver.find_element(*locator))
+  File "E:\hkmu-Project2022\FYP-AutomationWebTesting\automation-web-selenium\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 861, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+  File "E:\hkmu-Project2022\FYP-AutomationWebTesting\automation-web-selenium\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 444, in execute
+    self.error_handler.check_response(response)
+  File "E:\hkmu-Project2022\FYP-AutomationWebTesting\automation-web-selenium\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 249, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: disconnected: unable to send message to renderer
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.65)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x00C7DCE3]
+	(No symbol) [0x00C139D1]
+	(No symbol) [0x00B24DA8]
+	(No symbol) [0x00B16DF0]
+	(No symbol) [0x00B1747A]
+	(No symbol) [0x00B2C6A4]
+	(No symbol) [0x00B271C0]
+	(No symbol) [0x00B26D01]
+	(No symbol) [0x00B2756C]
+	(No symbol) [0x00B27850]
+	(No symbol) [0x00B4FDF8]
+	(No symbol) [0x00B503AB]
+	(No symbol) [0x00B7EE62]
+	(No symbol) [0x00B6AF14]
+	(No symbol) [0x00B7D57C]
+	(No symbol) [0x00B6ACC6]
+	(No symbol) [0x00B46F68]
+	(No symbol) [0x00B480CD]
+	GetHandleVerifier [0x00EF3832+2506274]
+	GetHandleVerifier [0x00F29794+2727300]
+	GetHandleVerifier [0x00F2E36C+2746716]
+	GetHandleVerifier [0x00D26690+617600]
+	(No symbol) [0x00C1C712]
+	(No symbol) [0x00C21FF8]
+	(No symbol) [0x00C220DB]
+	(No symbol) [0x00C2C63B]
+	BaseThreadInitThunk [0x76237D69+25]
+	RtlInitializeExceptionChain [0x771BB74B+107]
+	RtlClearBits [0x771BB6CF+191]
+
+</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                Total: 1, Pass: 0, Error: 1 -- Duration: 19.37 s
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('td').on('click', '.btn', function(e){
+                e.preventDefault();
+                e.stopImmediatePropagation();
+                var $this = $(this);
+                var $nextRow = $this.closest('tr').next('tr');
+                $nextRow.slideToggle("fast");
+                $this.text(function(i, text){
+                    if (text === 'View') {
+                        return 'Hide';
+                    } else {
+                        return 'View';
+                    };
+                });
+            });
+        });
+    </script>
+</body>
+</html

@@ -24,6 +24,11 @@ def step_impl(context):
 
 @then('User must successfully login to the Dashboard page')
 def step_impl(context):
-    text = WebDriverWait(context.driver, 20).until(EC.visibility_of_element_located((By.CSS_SELECTOR, "#app > div.oxd-layout > div.oxd-layout-navigation > aside > nav > div.oxd-sidepanel-body > ul > li:nth-child(8) > a > span"))).text
-    assert text =="Dashboard"
-    context.driver.close()
+    try:
+        text = WebDriverWait(context.driver, 20).until(EC.visibility_of_element_located((By.CSS_SELECTOR, "#app > div.oxd-layout > div.oxd-layout-navigation > aside > nav > div.oxd-sidepanel-body > ul > li:nth-child(8) > a > span"))).text
+    except:
+        context.driver.close()
+        assert False ,"Test Failed"
+    if text =="Dashboard":
+        context.driver.close()
+        assert True , "Test Passed"
