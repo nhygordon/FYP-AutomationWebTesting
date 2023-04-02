@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Unittest Results</title>
+    <title>loginpage ui test</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -10,10 +10,10 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <h2 class="text-capitalize">Unittest Results</h2>
-                <p class='attribute'><strong>Start Time: </strong>2023-03-20 18:11:02</p>
-                <p class='attribute'><strong>Duration: </strong>12.47 s</p>
-                <p class='attribute'><strong>Summary: </strong>Total: 1, Pass: 1</p>
+                <h2 class="text-capitalize">loginpage ui test</h2>
+                <p class='attribute'><strong>Start Time: </strong>2023-04-02 13:17:00</p>
+                <p class='attribute'><strong>Duration: </strong>5.05 s</p>
+                <p class='attribute'><strong>Summary: </strong>Total: 1, Pass: 0, Error: 1</p>
             </div>
         </div>
         <div class="row">
@@ -21,29 +21,38 @@
                 <table class='table table-hover table-responsive'>
                     <thead>
                         <tr>
-                            <th>__main__.ProfilePageTest</th>
+                            <th>__main__.LoginPageTest</th>
                             <th>Status</th>
                             <th></th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class='success'>
-                            <td class="col-xs-10">test_ssl_server</td>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_loginpage_ui</td>
                             <td class="col-xs-1">
-                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
                             </td>
                             <td class="col-xs-1">
                                 <button class="btn btn-default btn-xs">View</button>
                             </td>
                         </tr>
                         <tr style="display:none;">
-                            <td class="col-xs-9" colspan="3"><p>Testing had already run on the external website.
+                            <td class="col-xs-9" colspan="3"><p>SSIM: 0.9981297768426302
+Test completed
+</p><p style="color:maroon;">error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\highgui\src\window.cpp:971: error: (-215:Assertion failed) size.width>0 && size.height>0 in function 'cv::imshow'
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "e:\hkmu-Project2022\FYP-AutomationWebTesting\src\KFC\tests\loginpage\loginpage_visual_test.py", line 26, in test_loginpage_ui
+    loginpage.get_visual_compare_result("loginpage_production")
+  File "./src/KFC\pages\Pages.py", line 49, in get_visual_compare_result
+    cv2.imshow('image', img)
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\highgui\src\window.cpp:971: error: (-215:Assertion failed) size.width>0 && size.height>0 in function 'cv::imshow'
+
 </p>
                             </td>
                         </tr>
                         <tr>
                             <td colspan="3">
-                                Total: 1, Pass: 1 -- Duration: 12.47 s
+                                Total: 1, Pass: 0, Error: 1 -- Duration: 5.05 s
                             </td>
                         </tr>
                     </tbody>

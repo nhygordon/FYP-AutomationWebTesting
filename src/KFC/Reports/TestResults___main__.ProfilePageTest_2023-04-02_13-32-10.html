@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unittest Results</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="text-capitalize">Unittest Results</h2>
+                <p class='attribute'><strong>Start Time: </strong>2023-04-02 13:32:10</p>
+                <p class='attribute'><strong>Duration: </strong>55.90 s</p>
+                <p class='attribute'><strong>Summary: </strong>Total: 2, Pass: 0, Error: 2</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <table class='table table-hover table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>__main__.ProfilePageTest</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_modify_gender</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>Test completed
+</p><p style="color:maroon;">TimeoutException: Message: 
+Stacktrace:
+Backtrace:
+	(No symbol) [0x0031DCE3]
+	(No symbol) [0x002B39D1]
+	(No symbol) [0x001C4DA8]
+	(No symbol) [0x001F019F]
+	(No symbol) [0x001F03AB]
+	(No symbol) [0x0021EE62]
+	(No symbol) [0x0020AF14]
+	(No symbol) [0x0021D57C]
+	(No symbol) [0x0020ACC6]
+	(No symbol) [0x001E6F68]
+	(No symbol) [0x001E80CD]
+	GetHandleVerifier [0x00593832+2506274]
+	GetHandleVerifier [0x005C9794+2727300]
+	GetHandleVerifier [0x005CE36C+2746716]
+	GetHandleVerifier [0x003C6690+617600]
+	(No symbol) [0x002BC712]
+	(No symbol) [0x002C1FF8]
+	(No symbol) [0x002C20DB]
+	(No symbol) [0x002CC63B]
+	BaseThreadInitThunk [0x75637D69+25]
+	RtlInitializeExceptionChain [0x7727B74B+107]
+	RtlClearBits [0x7727B6CF+191]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "e:\hkmu-Project2022\FYP-AutomationWebTesting\src\KFC\tests\profilepage\profilepage_test.py", line 32, in test_modify_gender
+    profile_gender.modify_gender('M')
+  File "./src/KFC\pages\Pages.py", line 157, in modify_gender
+    WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable(ProfilePageLocators.gender_edit_button)).click()
+  File "E:\hkmu-Project2022\FYP-AutomationWebTesting\automation-web-selenium\lib\site-packages\selenium\webdriver\support\wait.py", line 95, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+Backtrace:
+	(No symbol) [0x0031DCE3]
+	(No symbol) [0x002B39D1]
+	(No symbol) [0x001C4DA8]
+	(No symbol) [0x001F019F]
+	(No symbol) [0x001F03AB]
+	(No symbol) [0x0021EE62]
+	(No symbol) [0x0020AF14]
+	(No symbol) [0x0021D57C]
+	(No symbol) [0x0020ACC6]
+	(No symbol) [0x001E6F68]
+	(No symbol) [0x001E80CD]
+	GetHandleVerifier [0x00593832+2506274]
+	GetHandleVerifier [0x005C9794+2727300]
+	GetHandleVerifier [0x005CE36C+2746716]
+	GetHandleVerifier [0x003C6690+617600]
+	(No symbol) [0x002BC712]
+	(No symbol) [0x002C1FF8]
+	(No symbol) [0x002C20DB]
+	(No symbol) [0x002CC63B]
+	BaseThreadInitThunk [0x75637D69+25]
+	RtlInitializeExceptionChain [0x7727B74B+107]
+	RtlClearBits [0x7727B6CF+191]
+
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_modify_username</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>Test completed
+</p><p style="color:maroon;">TimeoutException: Message: 
+Stacktrace:
+Backtrace:
+	(No symbol) [0x0031DCE3]
+	(No symbol) [0x002B39D1]
+	(No symbol) [0x001C4DA8]
+	(No symbol) [0x001F019F]
+	(No symbol) [0x001F03AB]
+	(No symbol) [0x0021EE62]
+	(No symbol) [0x0020AF14]
+	(No symbol) [0x0021D57C]
+	(No symbol) [0x0020ACC6]
+	(No symbol) [0x001E6F68]
+	(No symbol) [0x001E80CD]
+	GetHandleVerifier [0x00593832+2506274]
+	GetHandleVerifier [0x005C9794+2727300]
+	GetHandleVerifier [0x005CE36C+2746716]
+	GetHandleVerifier [0x003C6690+617600]
+	(No symbol) [0x002BC712]
+	(No symbol) [0x002C1FF8]
+	(No symbol) [0x002C20DB]
+	(No symbol) [0x002CC63B]
+	BaseThreadInitThunk [0x75637D69+25]
+	RtlInitializeExceptionChain [0x7727B74B+107]
+	RtlClearBits [0x7727B6CF+191]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "e:\hkmu-Project2022\FYP-AutomationWebTesting\src\KFC\tests\profilepage\profilepage_test.py", line 28, in test_modify_username
+    profile_name.modify_username('testing')
+  File "./src/KFC\pages\Pages.py", line 151, in modify_username
+    WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable(ProfilePageLocators.username_button)).click()
+  File "E:\hkmu-Project2022\FYP-AutomationWebTesting\automation-web-selenium\lib\site-packages\selenium\webdriver\support\wait.py", line 95, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+Backtrace:
+	(No symbol) [0x0031DCE3]
+	(No symbol) [0x002B39D1]
+	(No symbol) [0x001C4DA8]
+	(No symbol) [0x001F019F]
+	(No symbol) [0x001F03AB]
+	(No symbol) [0x0021EE62]
+	(No symbol) [0x0020AF14]
+	(No symbol) [0x0021D57C]
+	(No symbol) [0x0020ACC6]
+	(No symbol) [0x001E6F68]
+	(No symbol) [0x001E80CD]
+	GetHandleVerifier [0x00593832+2506274]
+	GetHandleVerifier [0x005C9794+2727300]
+	GetHandleVerifier [0x005CE36C+2746716]
+	GetHandleVerifier [0x003C6690+617600]
+	(No symbol) [0x002BC712]
+	(No symbol) [0x002C1FF8]
+	(No symbol) [0x002C20DB]
+	(No symbol) [0x002CC63B]
+	BaseThreadInitThunk [0x75637D69+25]
+	RtlInitializeExceptionChain [0x7727B74B+107]
+	RtlClearBits [0x7727B6CF+191]
+
+</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                Total: 2, Pass: 0, Error: 2 -- Duration: 55.90 s
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('td').on('click', '.btn', function(e){
+                e.preventDefault();
+                e.stopImmediatePropagation();
+                var $this = $(this);
+                var $nextRow = $this.closest('tr').next('tr');
+                $nextRow.slideToggle("fast");
+                $this.text(function(i, text){
+                    if (text === 'View') {
+                        return 'Hide';
+                    } else {
+                        return 'View';
+                    };
+                });
+            });
+        });
+    </script>
+</body>
+</html

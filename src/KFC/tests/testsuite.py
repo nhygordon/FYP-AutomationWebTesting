@@ -10,6 +10,6 @@ orderpage_test = unittest.TestLoader().loadTestsFromTestCase(OrderTest)
 # create a test suite combining search_test and home_page_test
 smoke_tests = unittest.TestSuite([loginpage_test,profilepage_test,orderpage_test])
 # run the suite
-runner = HtmlTestRunner.HTMLTestRunner(output='src/KFC/Reports',report_title='Test Report',descriptions='Smoke Tests')
+runner = HtmlTestRunner.HTMLTestRunner(output='src/KFC/Reports',combine_reports=True,report_title='Test Report',descriptions='Smoke Tests')
 # run the suite using HTMLTestRunner
 runner.run(smoke_tests)
