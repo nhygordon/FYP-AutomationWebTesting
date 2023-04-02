@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unittest Results</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="text-capitalize">Unittest Results</h2>
+                <p class='attribute'><strong>Start Time: </strong>2023-04-02 21:25:40</p>
+                <p class='attribute'><strong>Duration: </strong>29.43 s</p>
+                <p class='attribute'><strong>Summary: </strong>Total: 1, Pass: 0, Error: 1</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <table class='table table-hover table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>__main__.LoginPageTest</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_loginlogout</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>Test completed
+</p><p style="color:maroon;">TimeoutException: Message: 
+Stacktrace:
+Backtrace:
+	(No symbol) [0x008BDCE3]
+	(No symbol) [0x008539D1]
+	(No symbol) [0x00764DA8]
+	(No symbol) [0x0079019F]
+	(No symbol) [0x007903AB]
+	(No symbol) [0x007BEE62]
+	(No symbol) [0x007AAF14]
+	(No symbol) [0x007BD57C]
+	(No symbol) [0x007AACC6]
+	(No symbol) [0x00786F68]
+	(No symbol) [0x007880CD]
+	GetHandleVerifier [0x00B33832+2506274]
+	GetHandleVerifier [0x00B69794+2727300]
+	GetHandleVerifier [0x00B6E36C+2746716]
+	GetHandleVerifier [0x00966690+617600]
+	(No symbol) [0x0085C712]
+	(No symbol) [0x00861FF8]
+	(No symbol) [0x008620DB]
+	(No symbol) [0x0086C63B]
+	BaseThreadInitThunk [0x75B900F9+25]
+	RtlGetAppContainerNamedObjectPath [0x77C57BBE+286]
+	RtlGetAppContainerNamedObjectPath [0x77C57B8E+238]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\user\Documents\GitHub\FYP-AutomationWebTesting\src\lalamove\tests\loginpage_test.py", line 32, in test_loginlogout
+    login.enter_username(username)
+  File "C:\Users\user\Documents\GitHub\FYP-AutomationWebTesting\./src/OrangeHRM\Pages\pages.py", line 60, in enter_username
+    WebDriverWait(self.driver, 20).until(EC.visibility_of_element_located(LoginPageLocators.user_inputbox)).clear()
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\selenium\webdriver\support\wait.py", line 95, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+Backtrace:
+	(No symbol) [0x008BDCE3]
+	(No symbol) [0x008539D1]
+	(No symbol) [0x00764DA8]
+	(No symbol) [0x0079019F]
+	(No symbol) [0x007903AB]
+	(No symbol) [0x007BEE62]
+	(No symbol) [0x007AAF14]
+	(No symbol) [0x007BD57C]
+	(No symbol) [0x007AACC6]
+	(No symbol) [0x00786F68]
+	(No symbol) [0x007880CD]
+	GetHandleVerifier [0x00B33832+2506274]
+	GetHandleVerifier [0x00B69794+2727300]
+	GetHandleVerifier [0x00B6E36C+2746716]
+	GetHandleVerifier [0x00966690+617600]
+	(No symbol) [0x0085C712]
+	(No symbol) [0x00861FF8]
+	(No symbol) [0x008620DB]
+	(No symbol) [0x0086C63B]
+	BaseThreadInitThunk [0x75B900F9+25]
+	RtlGetAppContainerNamedObjectPath [0x77C57BBE+286]
+	RtlGetAppContainerNamedObjectPath [0x77C57B8E+238]
+
+</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                Total: 1, Pass: 0, Error: 1 -- Duration: 29.43 s
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('td').on('click', '.btn', function(e){
+                e.preventDefault();
+                e.stopImmediatePropagation();
+                var $this = $(this);
+                var $nextRow = $this.closest('tr').next('tr');
+                $nextRow.slideToggle("fast");
+                $this.text(function(i, text){
+                    if (text === 'View') {
+                        return 'Hide';
+                    } else {
+                        return 'View';
+                    };
+                });
+            });
+        });
+    </script>
+</body>
+</html
