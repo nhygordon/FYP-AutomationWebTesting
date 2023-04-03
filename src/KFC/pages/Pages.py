@@ -36,11 +36,20 @@ class BasePage(object):
         self.driver.save_screenshot("./Screenshot/{}.png".format(file_name))
     
     def get_visual_compare_result(self,filename):
+        '''
         #read the image, creating an object
-        im = Image.open(r"./src/KFC/Reports/Screenshot/{}.png".format(filename))
+        im = Image.open(".src/KFC/Reports/screenshot_result/{}.png".format(filename))
         #show picture
         print(im.show())
-    
+        '''
+        # Read RGB image
+        img = cv2.imread("./src/KFC/Reports/screenshot_result/{}.png".format(filename))
+ 
+        # Output img with window name as 'image'
+        cv2.imshow('image',img)
+        cv2.waitKey(0)
+        cv2.destroyAllWindows()
+
     def do_visual_compare(self,image_staging,image_production):
         imageA = cv2.imread("./src/KFC/Screenshot/{}.png".format(image_staging))
         imageB = cv2.imread("./src/KFC/Screenshot/{}.png".format(image_production))

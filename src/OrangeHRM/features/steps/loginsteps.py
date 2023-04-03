@@ -8,7 +8,11 @@ from selenium.webdriver.common.by import By
 
 @given('I launch Chrome browser')
 def step_impl(context):
-    context.driver = webdriver.Chrome()
+    context.driver = webdriver.Remote(
+        command_executor='http://192.168.56.1:4444/wd/hub',
+        options=webdriver.ChromeOptions()
+        )
+    context.driver.maximize_window()
 
 @when('I open orange HRM homepage')
 def step_impl(context):

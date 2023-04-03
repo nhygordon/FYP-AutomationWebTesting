@@ -3,7 +3,8 @@ class MainpageLocators(object):
     app_frame = (By.ID, "frame1")
     loginpage_button = (By.CSS_SELECTOR, "div.login")
     settingpage_button = (By.CSS_SELECTOR, "div.mine")
-    profilepage_button = (By.CSS_SELECTOR, "#app > div.mine > div.cellList > div.cellBox.active > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > img")
+    profilepage_button = (By.CSS_SELECTOR, "#app > div.mine > div.cellList > div.cellBox.active > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)")
+    
     take_out_button = (By.CSS_SELECTOR, "#main > div.bodyInfo > div.order > div:nth-child(2) > img")
     
 class Mainpage2Locators(MainpageLocators):

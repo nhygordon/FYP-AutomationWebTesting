@@ -6,3 +6,4 @@ Scenario: Add new employee
     And click add 
     And Enter First_name "a" and middle_name "b" and last_name "c" and employee_id "0001"
     Then click save
+    And close borwser

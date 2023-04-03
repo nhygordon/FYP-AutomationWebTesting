@@ -20,6 +20,7 @@ class ProfilePageTest(unittest.TestCase):
         login.enter_PhoneNumber()
         login.enter_Password()
         login.click_login()
+        login.go_settingpage()
         login.go_profilepage()
 
     def test_modify_username(self):
