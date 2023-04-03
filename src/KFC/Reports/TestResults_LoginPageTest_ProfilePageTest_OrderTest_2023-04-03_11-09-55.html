@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Report</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="text-capitalize">Test Report</h2>
+                <p class='attribute'><strong>Start Time: </strong>2023-04-03 11:09:55</p>
+                <p class='attribute'><strong>Duration: </strong>88.62 s</p>
+                <p class='attribute'><strong>Summary: </strong>Total: 5, Pass: 3, Error: 2</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <table class='table table-hover table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>loginpage.loginpage_test.LoginPageTest</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_loginlogout_phonenumber</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>Test completed
+</p>
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_loginpage_ui</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>SSIM: 0.9981297768426302
+Test completed
+</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                Total: 2, Pass: 2 -- Duration: 32.08 s
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <table class='table table-hover table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>profilepage.profilepage_test.ProfilePageTest</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_modify_gender</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>Test completed
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_modify_username</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">ElementClickInterceptedException: Message: element click intercepted: Element <div class="login" data-v-57d32660="">...</div> is not clickable at point (338, 24). Other element would receive the click: <body ondblclick="doubleClick()" style="background-color: rgb(255, 255, 255);" class="van-toast--unclickable">...</body>
+  (Session info: chrome=111.0.5563.147)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x006BDCE3]
+	(No symbol) [0x006539D1]
+	(No symbol) [0x00564DA8]
+	(No symbol) [0x005952EA]
+	(No symbol) [0x00593BBA]
+	(No symbol) [0x00591EFB]
+	(No symbol) [0x00591027]
+	(No symbol) [0x00588D05]
+	(No symbol) [0x005AAECC]
+	(No symbol) [0x00588726]
+	(No symbol) [0x005AB224]
+	(No symbol) [0x005BD57C]
+	(No symbol) [0x005AACC6]
+	(No symbol) [0x00586F68]
+	(No symbol) [0x005880CD]
+	GetHandleVerifier [0x00933832+2506274]
+	GetHandleVerifier [0x00969794+2727300]
+	GetHandleVerifier [0x0096E36C+2746716]
+	GetHandleVerifier [0x00766690+617600]
+	(No symbol) [0x0065C712]
+	(No symbol) [0x00661FF8]
+	(No symbol) [0x006620DB]
+	(No symbol) [0x0066C63B]
+	BaseThreadInitThunk [0x76327D69+25]
+	RtlInitializeExceptionChain [0x77DCB74B+107]
+	RtlClearBits [0x77DCB6CF+191]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "d:\Github\FYP-AutomationWebTesting\src\KFC\tests\profilepage\profilepage_test.py", line 19, in setUp
+    login.go_loginpage()
+  File "./src/KFC\pages\Pages.py", line 23, in go_loginpage
+    WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable(MainpageLocators.loginpage_button)).click()
+  File "C:\Users\ahoia\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webelement.py", line 93, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\ahoia\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webelement.py", line 410, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\ahoia\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 444, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\ahoia\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 249, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <div class="login" data-v-57d32660="">...</div> is not clickable at point (338, 24). Other element would receive the click: <body ondblclick="doubleClick()" style="background-color: rgb(255, 255, 255);" class="van-toast--unclickable">...</body>
+  (Session info: chrome=111.0.5563.147)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x006BDCE3]
+	(No symbol) [0x006539D1]
+	(No symbol) [0x00564DA8]
+	(No symbol) [0x005952EA]
+	(No symbol) [0x00593BBA]
+	(No symbol) [0x00591EFB]
+	(No symbol) [0x00591027]
+	(No symbol) [0x00588D05]
+	(No symbol) [0x005AAECC]
+	(No symbol) [0x00588726]
+	(No symbol) [0x005AB224]
+	(No symbol) [0x005BD57C]
+	(No symbol) [0x005AACC6]
+	(No symbol) [0x00586F68]
+	(No symbol) [0x005880CD]
+	GetHandleVerifier [0x00933832+2506274]
+	GetHandleVerifier [0x00969794+2727300]
+	GetHandleVerifier [0x0096E36C+2746716]
+	GetHandleVerifier [0x00766690+617600]
+	(No symbol) [0x0065C712]
+	(No symbol) [0x00661FF8]
+	(No symbol) [0x006620DB]
+	(No symbol) [0x0066C63B]
+	BaseThreadInitThunk [0x76327D69+25]
+	RtlInitializeExceptionChain [0x77DCB74B+107]
+	RtlClearBits [0x77DCB6CF+191]
+
+</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                Total: 2, Pass: 1, Error: 1 -- Duration: 18.57 s
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <table class='table table-hover table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>orderpage.order_shop_test.OrderTest</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_order_valid</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>Test completed
+</p><p style="color:maroon;">TimeoutException: Message: 
+Stacktrace:
+Backtrace:
+	(No symbol) [0x006BDCE3]
+	(No symbol) [0x006539D1]
+	(No symbol) [0x00564DA8]
+	(No symbol) [0x0059019F]
+	(No symbol) [0x005903AB]
+	(No symbol) [0x005BEE62]
+	(No symbol) [0x005AAF14]
+	(No symbol) [0x005BD57C]
+	(No symbol) [0x005AACC6]
+	(No symbol) [0x00586F68]
+	(No symbol) [0x005880CD]
+	GetHandleVerifier [0x00933832+2506274]
+	GetHandleVerifier [0x00969794+2727300]
+	GetHandleVerifier [0x0096E36C+2746716]
+	GetHandleVerifier [0x00766690+617600]
+	(No symbol) [0x0065C712]
+	(No symbol) [0x00661FF8]
+	(No symbol) [0x006620DB]
+	(No symbol) [0x0066C63B]
+	BaseThreadInitThunk [0x76327D69+25]
+	RtlInitializeExceptionChain [0x77DCB74B+107]
+	RtlClearBits [0x77DCB6CF+191]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "d:\Github\FYP-AutomationWebTesting\src\KFC\tests\orderpage\order_shop_test.py", line 31, in test_order_valid
+    select.choose_original()
+  File "./src/KFC\pages\Pages.py", line 189, in choose_original
+    WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable(OrderPageLocators.chooseOriginal_button)).click()
+  File "C:\Users\ahoia\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\support\wait.py", line 95, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+Backtrace:
+	(No symbol) [0x006BDCE3]
+	(No symbol) [0x006539D1]
+	(No symbol) [0x00564DA8]
+	(No symbol) [0x0059019F]
+	(No symbol) [0x005903AB]
+	(No symbol) [0x005BEE62]
+	(No symbol) [0x005AAF14]
+	(No symbol) [0x005BD57C]
+	(No symbol) [0x005AACC6]
+	(No symbol) [0x00586F68]
+	(No symbol) [0x005880CD]
+	GetHandleVerifier [0x00933832+2506274]
+	GetHandleVerifier [0x00969794+2727300]
+	GetHandleVerifier [0x0096E36C+2746716]
+	GetHandleVerifier [0x00766690+617600]
+	(No symbol) [0x0065C712]
+	(No symbol) [0x00661FF8]
+	(No symbol) [0x006620DB]
+	(No symbol) [0x0066C63B]
+	BaseThreadInitThunk [0x76327D69+25]
+	RtlInitializeExceptionChain [0x77DCB74B+107]
+	RtlClearBits [0x77DCB6CF+191]
+
+</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                Total: 1, Pass: 0, Error: 1 -- Duration: 37.97 s
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('td').on('click', '.btn', function(e){
+                e.preventDefault();
+                e.stopImmediatePropagation();
+                var $this = $(this);
+                var $nextRow = $this.closest('tr').next('tr');
+                $nextRow.slideToggle("fast");
+                $this.text(function(i, text){
+                    if (text === 'View') {
+                        return 'Hide';
+                    } else {
+                        return 'View';
+                    };
+                });
+            });
+        });
+    </script>
+</body>
+</html
