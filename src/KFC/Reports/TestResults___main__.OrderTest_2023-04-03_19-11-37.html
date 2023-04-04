@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unittest Results</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="text-capitalize">Unittest Results</h2>
+                <p class='attribute'><strong>Start Time: </strong>2023-04-03 19:11:37</p>
+                <p class='attribute'><strong>Duration: </strong>5.19 s</p>
+                <p class='attribute'><strong>Summary: </strong>Total: 1, Pass: 0, Error: 1</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <table class='table table-hover table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>__main__.OrderTest</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_order_valid</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>Test completed
+</p><p style="color:maroon;">StaleElementReferenceException: Message: stale element reference: element is not attached to the page document
+  (Session info: chrome=111.0.5563.147)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x006EDCE3]
+	(No symbol) [0x006839D1]
+	(No symbol) [0x00594DA8]
+	(No symbol) [0x005976FB]
+	(No symbol) [0x005975D0]
+	(No symbol) [0x00597EB0]
+	(No symbol) [0x005EDEED]
+	(No symbol) [0x005DAECC]
+	(No symbol) [0x005ED57C]
+	(No symbol) [0x005DACC6]
+	(No symbol) [0x005B6F68]
+	(No symbol) [0x005B80CD]
+	GetHandleVerifier [0x00963832+2506274]
+	GetHandleVerifier [0x00999794+2727300]
+	GetHandleVerifier [0x0099E36C+2746716]
+	GetHandleVerifier [0x00796690+617600]
+	(No symbol) [0x0068C712]
+	(No symbol) [0x00691FF8]
+	(No symbol) [0x006920DB]
+	(No symbol) [0x0069C63B]
+	BaseThreadInitThunk [0x765B7D69+25]
+	RtlInitializeExceptionChain [0x77D5B74B+107]
+	RtlClearBits [0x77D5B6CF+191]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "e:\hkmu-Project2022\FYP-AutomationWebTesting\src\KFC\tests\orderpage\order_shop_test.py", line 26, in test_order_valid
+    order.go_takeoutpage()
+  File "./src/KFC\pages\Pages.py", line 33, in go_takeoutpage
+    WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable(MainpageLocators.take_out_button)).click()
+  File "E:\hkmu-Project2022\FYP-AutomationWebTesting\automation-web-selenium\lib\site-packages\selenium\webdriver\support\wait.py", line 86, in until
+    value = method(self._driver)
+  File "E:\hkmu-Project2022\FYP-AutomationWebTesting\automation-web-selenium\lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 313, in _predicate
+    target = visibility_of(target)(driver)
+  File "E:\hkmu-Project2022\FYP-AutomationWebTesting\automation-web-selenium\lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 141, in _predicate
+    return _element_if_visible(element)
+  File "E:\hkmu-Project2022\FYP-AutomationWebTesting\automation-web-selenium\lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 147, in _element_if_visible
+    return element if element.is_displayed() == visibility else False
+  File "E:\hkmu-Project2022\FYP-AutomationWebTesting\automation-web-selenium\lib\site-packages\selenium\webdriver\remote\webelement.py", line 264, in is_displayed
+    return self.parent.execute_script("return (%s).apply(null, arguments);" % isDisplayed_js, self)
+  File "E:\hkmu-Project2022\FYP-AutomationWebTesting\automation-web-selenium\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 506, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+  File "E:\hkmu-Project2022\FYP-AutomationWebTesting\automation-web-selenium\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 444, in execute
+    self.error_handler.check_response(response)
+  File "E:\hkmu-Project2022\FYP-AutomationWebTesting\automation-web-selenium\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 249, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: element is not attached to the page document
+  (Session info: chrome=111.0.5563.147)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x006EDCE3]
+	(No symbol) [0x006839D1]
+	(No symbol) [0x00594DA8]
+	(No symbol) [0x005976FB]
+	(No symbol) [0x005975D0]
+	(No symbol) [0x00597EB0]
+	(No symbol) [0x005EDEED]
+	(No symbol) [0x005DAECC]
+	(No symbol) [0x005ED57C]
+	(No symbol) [0x005DACC6]
+	(No symbol) [0x005B6F68]
+	(No symbol) [0x005B80CD]
+	GetHandleVerifier [0x00963832+2506274]
+	GetHandleVerifier [0x00999794+2727300]
+	GetHandleVerifier [0x0099E36C+2746716]
+	GetHandleVerifier [0x00796690+617600]
+	(No symbol) [0x0068C712]
+	(No symbol) [0x00691FF8]
+	(No symbol) [0x006920DB]
+	(No symbol) [0x0069C63B]
+	BaseThreadInitThunk [0x765B7D69+25]
+	RtlInitializeExceptionChain [0x77D5B74B+107]
+	RtlClearBits [0x77D5B6CF+191]
+
+</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                Total: 1, Pass: 0, Error: 1 -- Duration: 5.19 s
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('td').on('click', '.btn', function(e){
+                e.preventDefault();
+                e.stopImmediatePropagation();
+                var $this = $(this);
+                var $nextRow = $this.closest('tr').next('tr');
+                $nextRow.slideToggle("fast");
+                $this.text(function(i, text){
+                    if (text === 'View') {
+                        return 'Hide';
+                    } else {
+                        return 'View';
+                    };
+                });
+            });
+        });
+    </script>
+</body>
+</html
