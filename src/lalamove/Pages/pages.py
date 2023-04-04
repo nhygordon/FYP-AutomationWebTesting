@@ -1,5 +1,5 @@
 import sys , os
-sys.path.append("./src/OrangeHRM")
+sys.path.append("./src/lalamove")
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
@@ -56,7 +56,7 @@ class BasePage(object):
 
 class LoginPage(BasePage):
     def enter_username(self,username= '95111073'):
-        WebDriverWait(self.driver, 20).until(EC.visibility_of_element_located(LoginPageLocators.user_inputbox)).clear()
+        WebDriverWait(self.driver, 20).until(EC.visibility_of_element_located(LoginPageLocators.user_inputbox)).click()
         WebDriverWait(self.driver, 20).until(EC.visibility_of_element_located(LoginPageLocators.user_inputbox)).send_keys(username)
 
     def enter_Password(self,password='iamgayhehe'):
@@ -77,7 +77,7 @@ class Contents(BasePage):
     def go_dashboard(self):
         WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable(MainpageLocators.dashboard_button)).click()
 
-class DelviroPage(LoginPage):
+class DelviroPage(BasePage):
     def enter_home(self,homename='MegaBox, 宏照道九龍灣香港'):
         WebDriverWait(self.driver, 20).until(EC.visibility_of_element_located(LocationPageLocators.home_inputbox)).clear()
         WebDriverWait(self.driver, 20).until(EC.visibility_of_element_located(LocationPageLocators.home_inputbox)).send_keys(homename)
