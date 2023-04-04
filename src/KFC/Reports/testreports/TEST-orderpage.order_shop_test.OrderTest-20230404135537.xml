@@ -1,0 +1,74 @@
+<?xml version="1.0" ?>
+<testsuite name="orderpage.order_shop_test.OrderTest-20230404135537" tests="1" time="30.151" failures="0" errors="1">
+	<testcase classname="orderpage.order_shop_test.OrderTest" name="test_order_valid" time="30.151">
+		<error type="TimeoutException" message="Message: 
+Stacktrace:
+Backtrace:
+	(No symbol) [0x00D1DCE3]
+	(No symbol) [0x00CB39D1]
+	(No symbol) [0x00BC4DA8]
+	(No symbol) [0x00BF019F]
+	(No symbol) [0x00BF03AB]
+	(No symbol) [0x00C1EE62]
+	(No symbol) [0x00C0AF14]
+	(No symbol) [0x00C1D57C]
+	(No symbol) [0x00C0ACC6]
+	(No symbol) [0x00BE6F68]
+	(No symbol) [0x00BE80CD]
+	GetHandleVerifier [0x00F93832+2506274]
+	GetHandleVerifier [0x00FC9794+2727300]
+	GetHandleVerifier [0x00FCE36C+2746716]
+	GetHandleVerifier [0x00DC6690+617600]
+	(No symbol) [0x00CBC712]
+	(No symbol) [0x00CC1FF8]
+	(No symbol) [0x00CC20DB]
+	(No symbol) [0x00CCC63B]
+	BaseThreadInitThunk [0x76CB7D69+25]
+	RtlInitializeExceptionChain [0x77E0B74B+107]
+	RtlClearBits [0x77E0B6CF+191]
+"><![CDATA[Traceback (most recent call last):
+  File "e:\hkmu-Project2022\FYP-AutomationWebTesting\src\KFC\tests\orderpage\order_shop_test.py", line 31, in test_order_valid
+    select.choose_original()
+  File "./src/KFC\pages\Pages.py", line 188, in choose_original
+    WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable(OrderPageLocators.à_la_carte_button)).click()
+  File "E:\hkmu-Project2022\FYP-AutomationWebTesting\automation-web-selenium\lib\site-packages\selenium\webdriver\support\wait.py", line 95, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+Backtrace:
+	(No symbol) [0x00D1DCE3]
+	(No symbol) [0x00CB39D1]
+	(No symbol) [0x00BC4DA8]
+	(No symbol) [0x00BF019F]
+	(No symbol) [0x00BF03AB]
+	(No symbol) [0x00C1EE62]
+	(No symbol) [0x00C0AF14]
+	(No symbol) [0x00C1D57C]
+	(No symbol) [0x00C0ACC6]
+	(No symbol) [0x00BE6F68]
+	(No symbol) [0x00BE80CD]
+	GetHandleVerifier [0x00F93832+2506274]
+	GetHandleVerifier [0x00FC9794+2727300]
+	GetHandleVerifier [0x00FCE36C+2746716]
+	GetHandleVerifier [0x00DC6690+617600]
+	(No symbol) [0x00CBC712]
+	(No symbol) [0x00CC1FF8]
+	(No symbol) [0x00CC20DB]
+	(No symbol) [0x00CCC63B]
+	BaseThreadInitThunk [0x76CB7D69+25]
+	RtlInitializeExceptionChain [0x77E0B74B+107]
+	RtlClearBits [0x77E0B6CF+191]
+
+]]></error>
+	</testcase>
+	<system-out><![CDATA[Test completed
+SSIM: 0.9981297768426302
+Test completed
+Test completed
+Test completed
+Test completed
+]]></system-out>
+	<system-err><![CDATA[E:\hkmu-Project2022\FYP-AutomationWebTesting\automation-web-selenium\lib\site-packages\selenium\webdriver\remote\webdriver.py:925: UserWarning: name used for saved screenshot does not match file type. It should end with a `.png` extension
+  warnings.warn(
+]]></system-err>
+</testsuite>

@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<testsuite name="profilepage.profilepage_test.ProfilePageTest-20230404135537" tests="2" time="20.728" failures="0" errors="0">
+	<testcase classname="profilepage.profilepage_test.ProfilePageTest" name="test_modify_gender" time="7.976"/>
+	<testcase classname="profilepage.profilepage_test.ProfilePageTest" name="test_modify_username" time="12.751"/>
+	<system-out><![CDATA[Test completed
+SSIM: 0.9981297768426302
+Test completed
+Test completed
+Test completed
+Test completed
+]]></system-out>
+	<system-err><![CDATA[E:\hkmu-Project2022\FYP-AutomationWebTesting\automation-web-selenium\lib\site-packages\selenium\webdriver\remote\webdriver.py:925: UserWarning: name used for saved screenshot does not match file type. It should end with a `.png` extension
+  warnings.warn(
+]]></system-err>
+</testsuite>
