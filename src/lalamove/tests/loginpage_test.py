@@ -2,7 +2,7 @@ from selenium import webdriver
 import time ,sys
 sys.path.append("./src/OrangeHRM")
 import unittest
-from Pages.pages import LoginPage 
+from Pages.pages import LoginPage, DelviroPage
 import HtmlTestRunner
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
@@ -12,16 +12,16 @@ class LoginPageTest(unittest.TestCase):
 
     @classmethod
     def setUp(cls):
+        # cls.driver = webdriver.Chrome()
+        # cls.driver.implicitly_wait(10)
+        # cls.driver.maximize_window()
+        # cls.driver.implicitly_wait(10)
+        # cls.driver.get('https://www.lalamove.com/zh-hk/')
         cls.driver = webdriver.Chrome()
         cls.driver.implicitly_wait(10)
         cls.driver.maximize_window()
         cls.driver.implicitly_wait(10)
-        cls.driver.get('https://www.lalamove.com/zh-hk/')
-        cls.driver2 = webdriver.Chrome()
-        cls.driver2.implicitly_wait(10)
-        cls.driver2.maximize_window()
-        cls.driver2.implicitly_wait(10)
-        cls.driver2.get('https://web.lalamove.com/login?_branch_match_id=827113453468420606&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXz0nMSczNL0vVSywo0MvJzMvWryqKLDYqcEz1SUsCAFOoooElAAAA')
+        cls.driver.get('https://web.lalamove.com/login?_branch_match_id=827113453468420606&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXz0nMSczNL0vVSywo0MvJzMvWryqKLDYqcEz1SUsCAFOoooElAAAA')
 
 
 

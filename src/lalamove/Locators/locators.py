@@ -3,7 +3,8 @@ class MainpageLocators(object):
     dashboard_button = (By.CSS_SELECTOR, "#hs_cos_wrapper_header_login_btn > a")
     
 class LoginPageLocators(MainpageLocators):
-    user_inputbox = (By.CSS_SELECTOR, "#🚐 > div:nth-child(1) > div > div.Container-sc-1y5phmm-1.khwpCj > div > form > div:nth-child(1) > div > div > div")
+    user_inputbox = (By.CSS_SELECTOR, "#username")
+    
     password_inputbox = (By.CSS_SELECTOR, "#🚐 > div:nth-child(1) > div > div.Container-sc-1y5phmm-1.khwpCj > div > form > div:nth-child(2) > div")
     login_button = (By.CSS_SELECTOR, "#🚐 > div:nth-child(1) > div > div.Container-sc-1y5phmm-1.khwpCj > div > form > button")
 
