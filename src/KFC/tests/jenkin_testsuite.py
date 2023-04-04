@@ -1,9 +1,9 @@
 import unittest
 #import HtmlTestRunner
 from xmlrunner import xmlrunner
-from tests.loginpage.loginpage_test import LoginPageTest
-from tests.profilepage.profilepage_test import ProfilePageTest
-from tests.orderpage.order_shop_test import OrderTest
+from loginpage.loginpage_test import LoginPageTest
+from profilepage.profilepage_test import ProfilePageTest
+from orderpage.order_shop_test import OrderTest
 # get all tests from SearchProductTest and HomePageTest class
 loginpage_test = unittest.TestLoader().loadTestsFromTestCase(LoginPageTest)
 profilepage_test = unittest.TestLoader().loadTestsFromTestCase(ProfilePageTest)
