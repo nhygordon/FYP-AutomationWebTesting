@@ -46,7 +46,7 @@ class BasePage(object):
         img = cv2.imread("./src/KFC/Reports/screenshot_result/{}.png".format(filename))
  
         # Output img with window name as 'image'
-        cv2.imshow('image',img)
+        cv2.imshow('Result',img)
         cv2.waitKey(0)
         cv2.destroyAllWindows()
 

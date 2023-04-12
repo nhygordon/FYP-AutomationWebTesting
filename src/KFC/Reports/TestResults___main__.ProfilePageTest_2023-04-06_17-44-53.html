@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unittest Results</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="text-capitalize">Unittest Results</h2>
+                <p class='attribute'><strong>Start Time: </strong>2023-04-06 17:44:53</p>
+                <p class='attribute'><strong>Duration: </strong>25.17 s</p>
+                <p class='attribute'><strong>Summary: </strong>Total: 3, Pass: 0, Error: 3</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <table class='table table-hover table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>__main__.ProfilePageTest</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_modify_gender_1___M____男__</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>Test completed
+</p><p style="color:maroon;">ElementClickInterceptedException: Message: element click intercepted: Element <div class="cell" data-v-fa5e9e5e="">...</div> is not clickable at point (179, 910). Other element would receive the click: <div class="coupon" data-v-65341039="">...</div>
+  (Session info: chrome=111.0.5563.147)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x0120DCE3]
+	(No symbol) [0x011A39D1]
+	(No symbol) [0x010B4DA8]
+	(No symbol) [0x010E52EA]
+	(No symbol) [0x010E3BBA]
+	(No symbol) [0x010E1EFB]
+	(No symbol) [0x010E1027]
+	(No symbol) [0x010D8D05]
+	(No symbol) [0x010FAECC]
+	(No symbol) [0x010D8726]
+	(No symbol) [0x010FB224]
+	(No symbol) [0x0110D57C]
+	(No symbol) [0x010FACC6]
+	(No symbol) [0x010D6F68]
+	(No symbol) [0x010D80CD]
+	GetHandleVerifier [0x01483832+2506274]
+	GetHandleVerifier [0x014B9794+2727300]
+	GetHandleVerifier [0x014BE36C+2746716]
+	GetHandleVerifier [0x012B6690+617600]
+	(No symbol) [0x011AC712]
+	(No symbol) [0x011B1FF8]
+	(No symbol) [0x011B20DB]
+	(No symbol) [0x011BC63B]
+	BaseThreadInitThunk [0x75C67D69+25]
+	RtlInitializeExceptionChain [0x771FB74B+107]
+	RtlClearBits [0x771FB6CF+191]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "E:\hkmu-Project2022\FYP-AutomationWebTesting\automation-web-selenium\lib\site-packages\ddt.py", line 220, in wrapper
+    return func(self, *args, **kwargs)
+  File "e:\hkmu-Project2022\FYP-AutomationWebTesting\src\KFC\tests\profilepage\profilepage_ddt_csv_test.py", line 45, in test_modify_gender
+    profile_gender.go_profilepage()
+  File "./src/KFC\pages\Pages.py", line 29, in go_profilepage
+    WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable(MainpageLocators.profilepage_button)).click()
+  File "E:\hkmu-Project2022\FYP-AutomationWebTesting\automation-web-selenium\lib\site-packages\selenium\webdriver\remote\webelement.py", line 93, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "E:\hkmu-Project2022\FYP-AutomationWebTesting\automation-web-selenium\lib\site-packages\selenium\webdriver\remote\webelement.py", line 410, in _execute
+    return self._parent.execute(command, params)
+  File "E:\hkmu-Project2022\FYP-AutomationWebTesting\automation-web-selenium\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 444, in execute
+    self.error_handler.check_response(response)
+  File "E:\hkmu-Project2022\FYP-AutomationWebTesting\automation-web-selenium\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 249, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <div class="cell" data-v-fa5e9e5e="">...</div> is not clickable at point (179, 910). Other element would receive the click: <div class="coupon" data-v-65341039="">...</div>
+  (Session info: chrome=111.0.5563.147)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x0120DCE3]
+	(No symbol) [0x011A39D1]
+	(No symbol) [0x010B4DA8]
+	(No symbol) [0x010E52EA]
+	(No symbol) [0x010E3BBA]
+	(No symbol) [0x010E1EFB]
+	(No symbol) [0x010E1027]
+	(No symbol) [0x010D8D05]
+	(No symbol) [0x010FAECC]
+	(No symbol) [0x010D8726]
+	(No symbol) [0x010FB224]
+	(No symbol) [0x0110D57C]
+	(No symbol) [0x010FACC6]
+	(No symbol) [0x010D6F68]
+	(No symbol) [0x010D80CD]
+	GetHandleVerifier [0x01483832+2506274]
+	GetHandleVerifier [0x014B9794+2727300]
+	GetHandleVerifier [0x014BE36C+2746716]
+	GetHandleVerifier [0x012B6690+617600]
+	(No symbol) [0x011AC712]
+	(No symbol) [0x011B1FF8]
+	(No symbol) [0x011B20DB]
+	(No symbol) [0x011BC63B]
+	BaseThreadInitThunk [0x75C67D69+25]
+	RtlInitializeExceptionChain [0x771FB74B+107]
+	RtlClearBits [0x771FB6CF+191]
+
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_modify_gender_2___F____女__</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>Test completed
+</p><p style="color:maroon;">ElementClickInterceptedException: Message: element click intercepted: Element <div class="cell" data-v-fa5e9e5e="">...</div> is not clickable at point (179, 910). Other element would receive the click: <div class="coupon" data-v-65341039="">...</div>
+  (Session info: chrome=111.0.5563.147)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x0120DCE3]
+	(No symbol) [0x011A39D1]
+	(No symbol) [0x010B4DA8]
+	(No symbol) [0x010E52EA]
+	(No symbol) [0x010E3BBA]
+	(No symbol) [0x010E1EFB]
+	(No symbol) [0x010E1027]
+	(No symbol) [0x010D8D05]
+	(No symbol) [0x010FAECC]
+	(No symbol) [0x010D8726]
+	(No symbol) [0x010FB224]
+	(No symbol) [0x0110D57C]
+	(No symbol) [0x010FACC6]
+	(No symbol) [0x010D6F68]
+	(No symbol) [0x010D80CD]
+	GetHandleVerifier [0x01483832+2506274]
+	GetHandleVerifier [0x014B9794+2727300]
+	GetHandleVerifier [0x014BE36C+2746716]
+	GetHandleVerifier [0x012B6690+617600]
+	(No symbol) [0x011AC712]
+	(No symbol) [0x011B1FF8]
+	(No symbol) [0x011B20DB]
+	(No symbol) [0x011BC63B]
+	BaseThreadInitThunk [0x75C67D69+25]
+	RtlInitializeExceptionChain [0x771FB74B+107]
+	RtlClearBits [0x771FB6CF+191]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "E:\hkmu-Project2022\FYP-AutomationWebTesting\automation-web-selenium\lib\site-packages\ddt.py", line 220, in wrapper
+    return func(self, *args, **kwargs)
+  File "e:\hkmu-Project2022\FYP-AutomationWebTesting\src\KFC\tests\profilepage\profilepage_ddt_csv_test.py", line 45, in test_modify_gender
+    profile_gender.go_profilepage()
+  File "./src/KFC\pages\Pages.py", line 29, in go_profilepage
+    WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable(MainpageLocators.profilepage_button)).click()
+  File "E:\hkmu-Project2022\FYP-AutomationWebTesting\automation-web-selenium\lib\site-packages\selenium\webdriver\remote\webelement.py", line 93, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "E:\hkmu-Project2022\FYP-AutomationWebTesting\automation-web-selenium\lib\site-packages\selenium\webdriver\remote\webelement.py", line 410, in _execute
+    return self._parent.execute(command, params)
+  File "E:\hkmu-Project2022\FYP-AutomationWebTesting\automation-web-selenium\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 444, in execute
+    self.error_handler.check_response(response)
+  File "E:\hkmu-Project2022\FYP-AutomationWebTesting\automation-web-selenium\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 249, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <div class="cell" data-v-fa5e9e5e="">...</div> is not clickable at point (179, 910). Other element would receive the click: <div class="coupon" data-v-65341039="">...</div>
+  (Session info: chrome=111.0.5563.147)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x0120DCE3]
+	(No symbol) [0x011A39D1]
+	(No symbol) [0x010B4DA8]
+	(No symbol) [0x010E52EA]
+	(No symbol) [0x010E3BBA]
+	(No symbol) [0x010E1EFB]
+	(No symbol) [0x010E1027]
+	(No symbol) [0x010D8D05]
+	(No symbol) [0x010FAECC]
+	(No symbol) [0x010D8726]
+	(No symbol) [0x010FB224]
+	(No symbol) [0x0110D57C]
+	(No symbol) [0x010FACC6]
+	(No symbol) [0x010D6F68]
+	(No symbol) [0x010D80CD]
+	GetHandleVerifier [0x01483832+2506274]
+	GetHandleVerifier [0x014B9794+2727300]
+	GetHandleVerifier [0x014BE36C+2746716]
+	GetHandleVerifier [0x012B6690+617600]
+	(No symbol) [0x011AC712]
+	(No symbol) [0x011B1FF8]
+	(No symbol) [0x011B20DB]
+	(No symbol) [0x011BC63B]
+	BaseThreadInitThunk [0x75C67D69+25]
+	RtlInitializeExceptionChain [0x771FB74B+107]
+	RtlClearBits [0x771FB6CF+191]
+
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_modify_gender_3___ND____非公開__</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">ElementClickInterceptedException: Message: element click intercepted: Element <div class="cell" data-v-fa5e9e5e="">...</div> is not clickable at point (179, 910). Other element would receive the click: <div class="coupon" data-v-65341039="">...</div>
+  (Session info: chrome=111.0.5563.147)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x0120DCE3]
+	(No symbol) [0x011A39D1]
+	(No symbol) [0x010B4DA8]
+	(No symbol) [0x010E52EA]
+	(No symbol) [0x010E3BBA]
+	(No symbol) [0x010E1EFB]
+	(No symbol) [0x010E1027]
+	(No symbol) [0x010D8D05]
+	(No symbol) [0x010FAECC]
+	(No symbol) [0x010D8726]
+	(No symbol) [0x010FB224]
+	(No symbol) [0x0110D57C]
+	(No symbol) [0x010FACC6]
+	(No symbol) [0x010D6F68]
+	(No symbol) [0x010D80CD]
+	GetHandleVerifier [0x01483832+2506274]
+	GetHandleVerifier [0x014B9794+2727300]
+	GetHandleVerifier [0x014BE36C+2746716]
+	GetHandleVerifier [0x012B6690+617600]
+	(No symbol) [0x011AC712]
+	(No symbol) [0x011B1FF8]
+	(No symbol) [0x011B20DB]
+	(No symbol) [0x011BC63B]
+	BaseThreadInitThunk [0x75C67D69+25]
+	RtlInitializeExceptionChain [0x771FB74B+107]
+	RtlClearBits [0x771FB6CF+191]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "e:\hkmu-Project2022\FYP-AutomationWebTesting\src\KFC\tests\profilepage\profilepage_ddt_csv_test.py", line 36, in setUp
+    login.go_profilepage()
+  File "./src/KFC\pages\Pages.py", line 29, in go_profilepage
+    WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable(MainpageLocators.profilepage_button)).click()
+  File "E:\hkmu-Project2022\FYP-AutomationWebTesting\automation-web-selenium\lib\site-packages\selenium\webdriver\remote\webelement.py", line 93, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "E:\hkmu-Project2022\FYP-AutomationWebTesting\automation-web-selenium\lib\site-packages\selenium\webdriver\remote\webelement.py", line 410, in _execute
+    return self._parent.execute(command, params)
+  File "E:\hkmu-Project2022\FYP-AutomationWebTesting\automation-web-selenium\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 444, in execute
+    self.error_handler.check_response(response)
+  File "E:\hkmu-Project2022\FYP-AutomationWebTesting\automation-web-selenium\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 249, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <div class="cell" data-v-fa5e9e5e="">...</div> is not clickable at point (179, 910). Other element would receive the click: <div class="coupon" data-v-65341039="">...</div>
+  (Session info: chrome=111.0.5563.147)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x0120DCE3]
+	(No symbol) [0x011A39D1]
+	(No symbol) [0x010B4DA8]
+	(No symbol) [0x010E52EA]
+	(No symbol) [0x010E3BBA]
+	(No symbol) [0x010E1EFB]
+	(No symbol) [0x010E1027]
+	(No symbol) [0x010D8D05]
+	(No symbol) [0x010FAECC]
+	(No symbol) [0x010D8726]
+	(No symbol) [0x010FB224]
+	(No symbol) [0x0110D57C]
+	(No symbol) [0x010FACC6]
+	(No symbol) [0x010D6F68]
+	(No symbol) [0x010D80CD]
+	GetHandleVerifier [0x01483832+2506274]
+	GetHandleVerifier [0x014B9794+2727300]
+	GetHandleVerifier [0x014BE36C+2746716]
+	GetHandleVerifier [0x012B6690+617600]
+	(No symbol) [0x011AC712]
+	(No symbol) [0x011B1FF8]
+	(No symbol) [0x011B20DB]
+	(No symbol) [0x011BC63B]
+	BaseThreadInitThunk [0x75C67D69+25]
+	RtlInitializeExceptionChain [0x771FB74B+107]
+	RtlClearBits [0x771FB6CF+191]
+
+</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                Total: 3, Pass: 0, Error: 3 -- Duration: 25.17 s
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('td').on('click', '.btn', function(e){
+                e.preventDefault();
+                e.stopImmediatePropagation();
+                var $this = $(this);
+                var $nextRow = $this.closest('tr').next('tr');
+                $nextRow.slideToggle("fast");
+                $this.text(function(i, text){
+                    if (text === 'View') {
+                        return 'Hide';
+                    } else {
+                        return 'View';
+                    };
+                });
+            });
+        });
+    </script>
+</body>
+</html
