@@ -22,7 +22,7 @@ class LoginPageTest(unittest.TestCase):
 
 
 
-    def test_loginlogout(self,username='95111073',password='iamgayhehe', homename='香港沙田文林路香港文化博物館',delvironame='香港沙田文林路香港文化博物館',name2='ccc',phone2name='95111073',addressname='c'):
+    def test_loginlogout(self,username='95111073',password='testing8964', homename='香港沙田文林路香港文化博物館',delvironame='香港沙田文林路香港文化博物館',name2='ccc',phone2name='95111073',addressname='c'):
         driver = self.driver
         login = LoginPage(driver)
         login.click_loginpage()

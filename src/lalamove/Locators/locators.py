@@ -11,12 +11,12 @@ class LoginPageLocators(MainpageLocators):
 class LocationPageLocators(MainpageLocators):
     home_inputbox = (By.CSS_SELECTOR, "#downshift-3-input")
     devliro_inputbox = (By.CSS_SELECTOR, "#downshift-4-input")
-    name2_inputbox = (By.CSS_SELECTOR, "body > div.Popover.Popover-right.Popover__StyledPopover-sc-xczulu-0.kcNpHI > div > div > form > div:nth-child(1) > div > input")
-    phone2_inputbox = (By.CSS_SELECTOR, "body > div.Popover.Popover-right.Popover__StyledPopover-sc-xczulu-0.kcNpHI > div > div > form > div:nth-child(2) > div > input")
-    address_inputbox = (By.CSS_SELECTOR, "body > div.Popover.Popover-right.Popover__StyledPopover-sc-xczulu-0.kcNpHI > div > div > form > div:nth-child(3) > div > input")
+    name2_inputbox = (By.CSS_SELECTOR, "body > div.Popover.Popover-right.css-wamzlp.etss4940 > div > div > form > div:nth-child(1) > div > input")
+    phone2_inputbox = (By.CSS_SELECTOR, "body > div.Popover.Popover-right.css-wamzlp.etss4940 > div > div > form > div:nth-child(2) > div > input")
+    address_inputbox = (By.CSS_SELECTOR, "body > div.Popover.Popover-right.css-wamzlp.etss4940 > div > div > form > div:nth-child(3) > div > input")
     car_button = (By.XPATH, "//*[@id='🚐']/div[1]/div/div[2]/main/div[2]/div/div[2]/div/div[2]/div[2]/div/div[1]/div/div[2]")
-    delviro_button = (By.CSS_SELECTOR, "#🚐 > div:nth-child(1) > div > div.styles__Container-sc-vatx7q-0.kRMjGM > main > div.PlaceOrderFooter__Container-sc-1wple4i-0.jOmfob > div.PlaceOrderFooter__ButtonGroup-sc-1wple4i-4.cbnoxK")
-    save_button = (By.CSS_SELECTOR, "body > div.Popover.Popover-right.Popover__StyledPopover-sc-xczulu-0.kcNpHI > div > div > form > div.Form__FormActionContainer-sc-pnea3c-3.kVVIWj > button.style__Base-sc-vh04nt-0.Button__StyledButton-sc-1gmuxjw-3.iETTwv.ccbMmc")
+    delviro_button = (By.CSS_SELECTOR, "#🚐 > div:nth-child(1) > div > div.css-125p82w.e5yta295 > main > div.css-cale47.ewx3rcp2 > div.css-udmynv.ewx3rcp1 > button")
+    save_button = (By.CSS_SELECTOR, "body > div.Popover.Popover-right.css-wamzlp.etss4940 > div > div > form > div.css-1szkkvs.exwk2gb0 > button.css-q4k3ze.ehazdfk0")
     enter2_home_button = (By.CSS_SELECTOR, "#🚐 > div:nth-child(1) > div > div.style__HeaderContainer-sc-1yrhzab-0.jXjUQS > div > div > div > a")
     
     
