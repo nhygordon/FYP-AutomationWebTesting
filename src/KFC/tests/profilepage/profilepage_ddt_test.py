@@ -12,10 +12,12 @@ class ProfilePageTest(unittest.TestCase):
 
     @classmethod
     def setUp(cls):
+        cls.driver = webdriver.Chrome()
+        '''
         cls.driver = webdriver.Remote(
         command_executor='http://192.168.56.1:4444/wd/hub',
         options=webdriver.ChromeOptions()
-        )
+        )'''
         cls.driver.implicitly_wait(10)
         cls.driver.maximize_window()
         cls.driver.implicitly_wait(10)
