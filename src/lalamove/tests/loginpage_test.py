@@ -43,6 +43,8 @@ class LoginPageTest(unittest.TestCase):
         delviro.click_save()
         time.sleep(3)
         delviro.enter_delviro(delvironame)
+        if homename == delvironame:
+         raise ValueError("Error: homename and delvironame are the same")
         time.sleep(3)
         delviro.enter()
         time.sleep(3)
