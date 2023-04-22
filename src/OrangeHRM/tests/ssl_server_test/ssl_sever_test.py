@@ -1,7 +1,7 @@
 import time
 from selenium import webdriver
 import os ,sys
-sys.path.append("./src/KFC")
+sys.path.append("./src/OrangeHRM")
 import unittest
 import HtmlTestRunner
 from selenium.webdriver.support.ui import WebDriverWait
